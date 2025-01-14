@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <h2>Kết quả liên hệ</h2>
+    <div class="result-container">
+        <div class="result-item">
+            <span class="label">Họ và tên :</span>
+            <span class="value" id="result-name"></span>
+        </div>
+        <div class="result-item">
+            <span class="label">Email :</span>
+            <span class="value" id="result-email"></span>
+        </div>
+        <div class="result-item">
+            <span class="label">Giới tính :</span>
+            <span class="value" id="result-gender"></span>
+        </div>
+        <div class="result-item">
+            <span class="label">Nghề nghiệp ổn định :</span>
+            <span class="value" id="result-job"></span>
+        </div>
+        <div class="result-item">
+            <span class="label">Đến từ :</span>
+            <span class="value" id="result-region"></span>
+        </div>
+        <div class="result-item">
+            <span class="label">Nội dung :</span>
+            <span class="value" id="result-message"></span>
+        </div>
+    </div>
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Get the form values from the URL
+        const name = urlParams.get('name') || 'Không có thông tin';
+        const email = urlParams.get('email') || 'Không có thông tin';
+        const gender = urlParams.get('gender') || 'Không có thông tin';
+        const job = urlParams.get('job') ? 'Có' : 'Không';
+        const region = urlParams.get('region') || 'Không có thông tin';
+        const message = urlParams.get('message') || 'Không có thông tin';
+
+        // Display the form data in the result divs
+        document.getElementById('result-name').textContent = name;
+        document.getElementById('result-email').textContent = email;
+        document.getElementById('result-gender').textContent = gender;
+        document.getElementById('result-job').textContent = job;
+        document.getElementById('result-region').textContent = region;
+        document.getElementById('result-message').textContent = message;
+    </script>
+
+</body>
+</html> 

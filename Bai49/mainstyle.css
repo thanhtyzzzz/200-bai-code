@@ -1,0 +1,50 @@
+body {
+    background-color: #e6f7ff;
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    color: #ff4d4d;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #ccc;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.categories, .publications {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories div, .publications div {
+    margin-right: 20px;
+}
+
+input[type="text"], input[type="date"] {
+    margin-top: 5px;
+    padding: 8px;
+    width: calc(100% - 16px);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.action-link img {
+    height: 50px;
+    cursor: pointer;
+}

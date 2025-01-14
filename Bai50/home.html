@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <form>
+        <div class="image">
+            <img src="DeLong.jpg">
+        </div>
+        <h1>Travel Expense Report</h1>
+        <hr>
+    
+        <div>
+            <span>1)</span>
+            <label for="fname">First Name:</label> 
+            <input type="text" id="fname" name="First Name" required>
+            <label for="lname">Last Name:</label> 
+            <input type="text" id="lname" name="Last Name" required>
+        </div>
+        
+        <div>
+            <span>2)</span>
+            <label for="nber">Social Security Number:</label> 
+            <input type="text" id="nber" name="Social Security Number" required>
+        </div>
+        
+        <div>
+            <span>3)</span>
+            <label for="department">Department:</label> 
+            <select name="department" id="department" required>
+                <option value="accounting">Accounting</option>
+                <option value="marketing">Marketing</option>
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+            </select>
+        </div>
+    
+        <div>
+            <span>4)</span>
+            <label for="purpose">Describe the purpose of your trip</label><br>
+            <textarea id="comment" cols="70" rows="4"></textarea>
+        </div>
+    
+        <div>
+            <span>5)</span>
+            <label for="expense">Itemize your travel expenses</label><br>
+            <table>
+                <thead>
+                    <th>Date</th>
+                    <th>Decription</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="date" name="" id=""></td>
+                        <td><input type="text" name="" id=""></td>
+                        <td><select name="" id="">
+                                <option value="Meal">Meal</option>
+                            </select></td>
+                        <td><input type="number" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id=""></td>
+                        <td><input type="text" name="" id=""></td>
+                        <td><select name="" id="">
+                                <option value="Meal">Meal</option>
+                            </select></td>
+                        <td><input type="number" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id=""></td>
+                        <td><input type="text" name="" id=""></td>
+                        <td><select name="" id="">
+                                <option value="Meal">Meal</option>
+                            </select></td>
+                        <td><input type="number" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id=""></td>
+                        <td><input type="text" name="" id=""></td>
+                        <td><select name="" id="">
+                                <option value="Meal">Meal</option>
+                            </select></td>
+                        <td><input type="number" name="" id=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div>
+            <span>6)</span>
+            <span>Have you submitted your receipts?</span>
+            <input type="radio" id="yes" name="submitted" value="Yes">
+            <label for="submit">Yes</label>
+            <input type="radio" id="no" name="submitted" value="No">
+            <label for="submit">No</label>
+        </div>
+    
+        <div>
+            <button type="button" onclick="alert('Submit sucessfully')">Submit travel expenses</button>
+            <button type="button" onclick="document.querySelector('form').reset();">Reset</button>
+        </div>
+    
+        <div>
+            Questions? Contact Debbie Larson in Accounting (ext: 2150)
+        </div>
+    </form>
+</body>
+</html>

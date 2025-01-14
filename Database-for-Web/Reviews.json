@@ -1,0 +1,6 @@
+[
+    { "id": 1, "rating": 5, "comment": "Bánh tráng rất ngon, sẽ mua lại!", "user_id": 1, "product_id": 1 },
+    { "id": 2, "rating": 4, "comment": "Bánh nướng thơm, nhưng giao hơi chậm.", "user_id": 2, "product_id": 4 },
+    { "id": 3, "rating": 3, "comment": "Hơi ngọt nhưng ăn ổn.", "user_id": 3, "product_id": 7 },
+    { "id": 4, "rating": 5, "comment": "Combo truyền thống rất đáng tiền!", "user_id": 4, "product_id": 8 }
+]

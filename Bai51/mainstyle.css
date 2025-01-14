@@ -1,0 +1,17 @@
+body {
+    background-color: #48b1b9;
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+div {
+    margin-bottom: 25px;
+}
+
+.scrollable-list {
+    width: 200px;
+    overflow-y: scroll;
+}

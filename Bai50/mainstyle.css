@@ -1,0 +1,54 @@
+body {
+    background-color: #f0f8ff;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-size: 24px;
+    color: #004080;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+table {
+    border: 1px solid #555;
+    width: 60%; /* Giới hạn độ rộng của bảng */
+    border-collapse: collapse;
+    margin: 10px auto; /* Canh giữa bảng trên trang */
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.image {
+    text-align: center;
+}
+
+hr {
+    height: 3px;
+    background-color: #006600;
+    border: none;
+}
+
+textarea {
+    resize: vertical;
+    border: 1px solid #888;
+    padding: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+div {
+    margin-bottom: 25px;
+    font-size: 16px;
+}

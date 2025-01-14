@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(255, 213, 136); /* Nền màu vàng nhạt */
+}
+
+h2, h3, h4 {
+    color: purple; /* Màu tím cho tiêu đề */
+}
+
+header {
+    text-align: center; /* Căn giữa nội dung trong header */
+}
+
+.box {
+    background-color: antiquewhite; /* Nền màu trắng nhạt */
+    border: 5px solid lightgray; /* Viền xám nhạt, khá dày */
+    margin-bottom: 5px;
+}
+
+.grid-container {
+    display: grid; /* Chia layout thành lưới */
+    grid-template-columns: 7fr 3fr; /* Cột trái chiếm 70%, cột phải 30% */
+    column-gap: 10px; /* Khoảng cách giữa các cột */
+}
+
+.left-container {
+    text-align: justify; /* Căn đều hai bên văn bản */
+}
+
+.right-container {
+    background-color: rgb(105, 235, 105); /* Nền xanh lá nhạt */
+    padding-left: 10px; /* Thêm khoảng cách nội dung bên trái */
+}
+
+.image1 {
+    float: right; /* Hình ảnh đẩy sang phải */
+    margin-left: 10px; /* Khoảng cách giữa hình ảnh và văn bản bên trái */
+}
+
+.image2 {
+    float: left; /* Hình ảnh đẩy sang trái */
+    margin-right: 10px; /* Khoảng cách giữa hình ảnh và văn bản bên phải */
+}

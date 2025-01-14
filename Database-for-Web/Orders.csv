@@ -1,0 +1,6 @@
+[
+    { "id": 1, "order_date": "2025-01-01T10:00:00Z", "total_price": 45000, "status": "pending", "user_id": 1, "payment_method_id": 1 },
+    { "id": 2, "order_date": "2025-01-02T14:30:00Z", "total_price": 60000, "status": "shipped", "user_id": 2, "payment_method_id": 2 },
+    { "id": 3, "order_date": "2025-01-05T08:45:00Z", "total_price": 150000, "status": "delivered", "user_id": 3, "payment_method_id": 3 },
+    { "id": 4, "order_date": "2025-01-07T18:00:00Z", "total_price": 65000, "status": "canceled", "user_id": 4, "payment_method_id": 1 }
+]

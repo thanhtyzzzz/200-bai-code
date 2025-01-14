@@ -1,0 +1,10 @@
+[
+    { "id": 1, "name": "Bánh tráng trộn tỏi phi", "description": "Bánh tráng trộn với tỏi phi thơm ngon, giòn tan.", "price": 20000, "stock_quantity": 100, "category_id": 1 },
+    { "id": 2, "name": "Bánh tráng trộn me chua cay", "description": "Bánh tráng trộn với nước sốt me chua cay hấp dẫn.", "price": 25000, "stock_quantity": 80, "category_id": 1 },
+    { "id": 3, "name": "Bánh tráng trộn khô mực", "description": "Bánh tráng trộn kèm khô mực xé sợi thơm ngon.", "price": 30000, "stock_quantity": 50, "category_id": 1 },
+    { "id": 4, "name": "Bánh tráng nướng gà cay", "description": "Bánh tráng nướng kết hợp gà cay thơm nức mũi.", "price": 35000, "stock_quantity": 40, "category_id": 2 },
+    { "id": 5, "name": "Bánh tráng nướng sầu riêng phô mai", "description": "Bánh tráng nướng với sầu riêng và phô mai béo ngậy.", "price": 40000, "stock_quantity": 30, "category_id": 2 },
+    { "id": 6, "name": "Bánh tráng vị xoài chín sấy khô", "description": "Bánh tráng vị xoài sấy khô ngọt ngào.", "price": 20000, "stock_quantity": 120, "category_id": 3 },
+    { "id": 7, "name": "Bánh tráng vị sô-cô-la hạt dẻ", "description": "Bánh tráng vị sô-cô-la và hạt dẻ lạ miệng.", "price": 27000, "stock_quantity": 80, "category_id": 3 },
+    { "id": 8, "name": "Combo vị truyền thống", "description": "Combo gồm bánh tráng vị me, tỏi phi và phô mai.", "price": 65000, "stock_quantity": 50, "category_id": 4 }
+]

@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    color: green;
+    background: white url(hinh/Draft.jpg) no-repeat fixed center center;
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-title {
+    color: rgb(153, 102, 6);
+    font-weight: bold;
+}
+
+.main-header {
+    text-align: center;
+}
+
+/* Navigation Links */
+a {
+    font-size: 15px;
+    color: blue;
+    padding-left: 10px;
+}
+
+a:hover {
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Product List Styles */
+ul {
+    list-style: circle url(hinh/Apple.jpg) outside;
+}
+
+ul b,
+.product-list b {
+    color: rgb(155, 0, 0);
+}
+
+.product-list span {
+    color: rgb(153, 102, 6);
+    font-weight: bold;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    column-gap: 10px;
+}
+
+/* Messier Marathon */
+.messier-marathon {
+    padding: 0.5em;
+    border: 2px solid green;
+    background-color: rgb(252, 221, 163);
+}
+
+/* Blockquote */
+blockquote {
+    background-color: silver;
+}
+
+/* Footer */
+.footer-info {
+    background-color: white;
+}

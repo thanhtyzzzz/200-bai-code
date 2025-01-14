@@ -15,7 +15,7 @@ ul {
 
 /* Các kiểu cho liên kết */
 a:link {
-    color: red; /* Màu chữ liên kết chưa truy cập */
+    color: blue; /* Màu chữ liên kết chưa truy cập */
 }
 
 a:visited {
@@ -24,6 +24,7 @@ a:visited {
 
 a:hover {
     color: hotpink; /* Màu khi di chuột vào liên kết */
+    padding-left:10px
 }
 
 a:active {

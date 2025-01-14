@@ -1,0 +1,5 @@
+[
+    { "id": 1, "method_name": "Thẻ tín dụng" },
+    { "id": 2, "method_name": "Ví điện tử" },
+    { "id": 3, "method_name": "Chuyển khoản ngân hàng" }
+]

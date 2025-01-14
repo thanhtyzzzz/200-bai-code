@@ -1,0 +1,129 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table {
+    background: url(images/bg.png);
+    width: 100%;
+    color: white;
+}
+
+/* .image-cell {
+    text-align: left;
+    padding-left: 20px;
+} */
+.image-cell {
+    background-color: #004080; /* Màu xanh đậm giống giao diện */
+    height: auto; /* Chiều cao lớn hơn */
+    width: auto; /* Chiều rộng tùy chỉnh */
+    /* object-fit: contain; Đảm bảo giữ tỉ lệ hình ảnh */
+}
+
+  
+.text-cell {
+    background-color: #004080; 
+    text-align: right; 
+    padding-right: 20px;
+}
+
+.logo {
+    height: auto; /* Chiều cao lớn hơn */
+    width: auto; /* Chiều rộng tùy chỉnh */
+    /* object-fit: contain; Đảm bảo giữ tỉ lệ hình ảnh */
+}
+.navbar a {
+    color: white;
+    font-size: 13px;
+}
+
+.search-section h2 {
+    text-align: right; 
+    margin-top: 20px; 
+    font-size: 14px;
+    width: 150px;
+    padding: 2px;
+    color: yellow;
+    display: inline-block;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    border-top: 2px solid #ccc;
+    
+}
+
+.sidebar {
+    background-color: #060645;
+    padding: 20px;
+    
+}
+
+.sidebar ul {
+    list-style-type: square;
+    color: white;
+    padding-left: 10px;
+}
+
+.sidebar ul li {
+    margin: 14px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: white;
+}
+
+.content h2 {
+    background-color: #E0FFFF;
+    color: #060645;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.content p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.back {
+    text-align: right;
+    font-size: 14px;
+}
+
+.back a:hover {
+    color:red;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.images img {
+    width: 32%;
+    height: auto;
+    border: 1px solid #ccc;
+}

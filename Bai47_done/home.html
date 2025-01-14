@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Style-trigger</title>
+    <style type="text/css">
+        /* Định dạng cho phần tiêu đề (thead) và chân bảng (tfoot) */
+        thead, tfoot {
+            background-color: blue; /* Màu nền xanh */
+            color: white; /* Màu chữ trắng */
+        }
+
+        /* Định dạng các dòng lẻ (1, 3, 5) trong tbody */
+        tbody tr:nth-child(2n+1) {
+            background-color: whitesmoke; /* Màu nền xám nhạt */
+        }
+
+        /* Định dạng các dòng chẵn (2, 4) trong tbody */
+        tbody tr:nth-child(2n) {
+            background-color: pink; /* Màu nền hồng nhạt */
+        }
+
+        /* Hiệu ứng khi di chuột vào bất kỳ dòng nào trong tbody */
+        tbody tr:hover {
+            background-color: yellow; /* Màu nền vàng khi hover */
+            cursor: pointer; /* Con trỏ chuột đổi thành dạng pointer */
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="5" style="width: 50%; margin: auto; text-align: center;">
+        <!-- Phần tiêu đề bảng -->
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Mã</th>
+                <th>Tên</th>
+            </tr>
+        </thead>
+        <!-- Phần nội dung bảng -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>K174111253</td>
+                <td>Trần Thị Yến Linh</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>K174111260</td>
+                <td>Trần Trọng Nghiêm</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>K164060845</td>
+                <td>Nguyễn Khiếu Thành Huy</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>K164060854</td>
+                <td>Trịnh Thị Hồng Vân</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>K184111428</td>
+                <td>Nguyễn Thị Tiên</td>
+            </tr>
+        </tbody>
+        <!-- Phần chân bảng -->
+        <tfoot>
+            <tr>
+                <td colspan="3">Designed by Tèo Đẹp Trai</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

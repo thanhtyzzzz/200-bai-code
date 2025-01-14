@@ -1,0 +1,75 @@
+/* Thiết lập chung cho toàn bộ trang */
+body {
+    background-color: black; /* Màu nền đen */
+    color: white; /* Màu chữ trắng */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font chữ chính */
+    font-size: 15px; /* Kích thước chữ mặc định */
+}
+
+/* Class cho phần chứa nội dung chính */
+.box {
+    padding-left: 20px; /* Thêm khoảng cách bên trái cho nội dung */
+}
+
+/* Các đoạn văn bên trong .box */
+.box p {
+    border: 2px solid yellow; /* Đường viền màu vàng */
+    background-color: red; /* Nền đỏ */
+    padding: 5px; /* Thêm khoảng cách bên trong đoạn văn */
+}
+
+/* Tạo hiệu ứng chữ cái đầu tiên (first letter) cho từng sheet */
+
+/* Sheet 1: Chữ cái đầu tiên của đoạn văn có màu đen */
+.sheet-1 p::first-letter {
+    color: black;
+}
+
+/* Sheet 2: Chữ cái đầu tiên của đoạn văn có màu xanh dương */
+.sheet-2 p::first-letter {
+    color: blue;
+}
+
+/* Sheet 3: Chữ cái đầu tiên của đoạn văn có màu xanh ngọc */
+.sheet-3 p::first-letter {
+    color: rgb(8, 127, 136);
+}
+
+/* Sheet 4: Chữ cái đầu tiên của đoạn văn có màu xanh lá cây sáng */
+.sheet-4 p::first-letter {
+    color: lawngreen;
+}
+
+/* Sheet 5: Chữ cái đầu tiên của đoạn văn có màu trắng */
+.sheet-5 p::first-letter {
+    color: white;
+}
+
+/* Sheet 6: Chữ cái đầu tiên của đoạn văn có màu xanh dương nhạt */
+.sheet-6 p::first-letter {
+    color: rgb(50, 205, 205);
+}
+
+/* Sheet 7: Chữ cái đầu tiên của đoạn văn có màu xám */
+.sheet-7 p::first-letter {
+    color: gray;
+}
+
+/* Sheet 8: Chữ cái đầu tiên của đoạn văn có màu xanh dương đậm */
+.sheet-8 p::first-letter {
+    color: darkblue;
+}
+
+/* Thiết lập layout dạng grid cho container chính */
+.grid-container {
+    display: grid; /* Sử dụng grid layout */
+    grid-template-columns: 3fr 7fr; /* Chia thành 2 cột: cột đầu chiếm 3 phần, cột sau chiếm 7 phần */
+    grid-auto-rows: 1fr; /* Các hàng có chiều cao tự động và đồng đều */
+    column-gap: 10px; /* Khoảng cách giữa các cột */
+    font-weight: bold; /* Làm đậm toàn bộ nội dung bên trong */
+}
+
+/* Định dạng nội dung trong cột trái */
+.left-container {
+    text-align: center; /* Căn giữa nội dung (bao gồm ảnh và văn bản) */
+}

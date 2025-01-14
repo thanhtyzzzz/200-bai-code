@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <form>
+        <div class="center">
+            <img src="Logo.gif">
+            <h1>Newborn Registration</h1>
+        </div>
+
+        <div>
+            <label for="date">Date:</label> 
+            <input type="date" id="" name="">
+        </div>
+
+        <div>
+            <span>1)</span>
+            <label for="fname">Infant's first name:</label> 
+            <input type="text" id="fname" name="First Name" required>
+            <label for="lname">Last:</label> 
+            <input type="text" id="lname" name="Last Name" required>
+        </div>
+
+        <div>
+            <span>2)</span>
+            <label for="nber">Medical Record #:</label> 
+            <input type="text" id="nber" name="Medical Record" required>
+        </div>
+
+        <div>
+            <span>3)</span>
+            <label for="birth">Date of birth:</label> 
+            <input type="date" id="birth" name="Date of birth" required>
+        </div>
+
+        <div>
+            <span>4)</span>
+            <label for="weight">Birth weight:</label> 
+            <input type="text" id="weight" name="Birth weight" required>
+        </div>
+
+        <div>
+            <span>5)</span>
+            <label for="score">APGAR score:</label> 
+            <input type="text" id="score" name="APGAR score" required>
+        </div>
+
+        <div>
+            <span>6)</span>
+            <label for="mfname">Mother's first name:</label> 
+            <input type="text" id="mfname" name="Mother's first name" required>
+            <label for="mlname">Last:</label> 
+            <input type="text" id="mlname" name="Mother's last name" required>
+        </div>
+
+        <div>
+            <span>7)</span>
+            <label for="ffname">Father's first name:</label> 
+            <input type="text" id="ffname" name="Father's first name" required>
+            <label for="flname">Last:</label> 
+            <input type="text" id="flname" name="Father's last name" required>
+        </div>
+
+        <div>
+            <span>8) Physican (check all that apply):</span>
+            <select class="scrollable-list" size="3" name="" id="">
+                <option value="">Dr.Warren Albert</option>
+                <option value="">Dr.Maria Alvarez</option>
+                <option value="">Dr.Karen Brinkman</option>
+                <option value="">Dr.Micheal Kerry</option>
+            </select>
+        </div>
+
+        <div class="center">
+            <button type="button" onclick="alert('Register Sucessfully!')">Register</button>
+            <button type="button" onclick="document.querySelector('form').reset();">Cancel</button>
+        </div>
+    </form>
+</body>
+</html>

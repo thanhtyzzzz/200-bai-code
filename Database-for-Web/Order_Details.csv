@@ -1,0 +1,8 @@
+[
+    { "id": 1, "order_id": 1, "product_id": 1, "quantity": 2, "price": 40000 },
+    { "id": 2, "order_id": 1, "product_id": 2, "quantity": 1, "price": 25000 },
+    { "id": 3, "order_id": 2, "product_id": 4, "quantity": 2, "price": 70000 },
+    { "id": 4, "order_id": 2, "product_id": 5, "quantity": 1, "price": 40000 },
+    { "id": 5, "order_id": 3, "product_id": 8, "quantity": 2, "price": 130000 },
+    { "id": 6, "order_id": 3, "product_id": 3, "quantity": 2, "price": 60000 }
+]
