@@ -1,0 +1,44 @@
+<root> 
+    <sinhvien>
+        <mssv>K114069876</mssv> 
+        <hoTen>Vô Danh</hoTen>
+        <ngaySinh>1/1/1993</ngaySinh> 
+        <gioiTinh>Nam</gioiTinh> 
+        <hinh>hinh1.jpg</hinh>
+    </sinhvien>
+    <sinhvien>
+        <mssv>K114069877</mssv> 
+        <hoTen>Nguyễn Văn A</hoTen>
+        <ngaySinh>15/5/1994</ngaySinh> 
+        <gioiTinh>Nam</gioiTinh> 
+        <hinh>hinh2.jpg</hinh>
+    </sinhvien>
+    <sinhvien>
+        <mssv>K114069878</mssv> 
+        <hoTen>Trần Thị B</hoTen>
+        <ngaySinh>20/8/1992</ngaySinh> 
+        <gioiTinh>Nữ</gioiTinh> 
+        <hinh>hinh3.jpg</hinh>
+    </sinhvien>
+    <sinhvien>
+        <mssv>K114069879</mssv> 
+        <hoTen>Lê Văn C</hoTen>
+        <ngaySinh>10/10/1995</ngaySinh> 
+        <gioiTinh>Nam</gioiTinh> 
+        <hinh>hinh4.jpg</hinh>
+    </sinhvien>
+    <sinhvien>
+        <mssv>K114069880</mssv> 
+        <hoTen>Hoàng Thị D</hoTen>
+        <ngaySinh>25/12/1993</ngaySinh> 
+        <gioiTinh>Nữ</gioiTinh> 
+        <hinh>hinh5.jpg</hinh>
+    </sinhvien>
+    <sinhvien>
+        <mssv>K114069881</mssv> 
+        <hoTen>Phạm Văn E</hoTen>
+        <ngaySinh>5/3/1990</ngaySinh> 
+        <gioiTinh>Nam</gioiTinh> 
+        <hinh>hinh6.jpg</hinh>
+    </sinhvien>
+</root>

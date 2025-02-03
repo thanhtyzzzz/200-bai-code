@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng số tiền</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h1>Output Total</h1>
+    <script>
+        function getUrlParameter(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        const total = getUrlParameter("total");
+
+        document.write(`<p>Total: ${total}</p>`);
+    </script>
+</body>
+
+
+</html>

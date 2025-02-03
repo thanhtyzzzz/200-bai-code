@@ -1,0 +1,51 @@
+HTML (index.html):
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML DOM Parser</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h1>Bài 66: XML-DOM Parser</h1>
+    <div id="xmlContainer">
+        <textarea id="xmlInput" rows="10" cols="50">
+<sinhvien>
+    <mssv>K123456789</mssv>
+    <hoTen>Quách Thị Bán Bún Bò</hoTen>
+    <ngaySinh>7/7/1997</ngaySinh>
+    <gioiTinh>Nữ</gioiTinh>
+</sinhvien>
+        </textarea>
+        <button onclick="parseXML()">Hiển thị thông tin</button>
+    </div>
+    <table id="infoTable" border="1">
+        <thead>
+            <tr>
+                <th colspan="2">Chi tiết thông tin Sinh Viên</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mã Sinh Viên</td>
+                <td id="mssv">---</td>
+            </tr>
+            <tr>
+                <td>Họ tên</td>
+                <td id="hoTen">---</td>
+            </tr>
+            <tr>
+                <td>Ngày Sinh</td>
+                <td id="ngaySinh">---</td>
+            </tr>
+            <tr>
+                <td>Giới Tính</td>
+                <td id="gioiTinh">---</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<p>binding-event works!</p>
+<button (click)="onClick($event)">Click Me</button>
+Name:
+<input type="text" #myName>
+<button (click)="onSubmit(myName.value)">Submit</button>
+
+<h3>Calculator</h3>
+<label>
+  A: <input type="number" [(ngModel)]="a">
+</label>
+<br>
+<label>
+  B: <input type="number" [(ngModel)]="b">
+</label>
+<br>
+<button (click)="add()">Add</button>
+<button (click)="subtract()">Subtract</button>
+<button (click)="multiply()">Multiply</button>
+<button (click)="divide()">Divide</button>
+<button (click)="clear()">Clear</button>
+
+<div *ngIf="result !== null">
+  <h4>Result: {{ result }}</h4>
+</div>

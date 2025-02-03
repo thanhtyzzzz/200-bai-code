@@ -1,0 +1,121 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ffafbd, #ffc3a0, #a1c4fd, #c2e9fb);
+    background-size: 300% 300%;
+    animation: gradientBG 10s ease infinite;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    margin-top: 40px;
+    color: #fff;
+}
+
+/* Table and form styles */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+/* Highlight effect on hover */
+tr:hover td {
+    background-color: rgba(255, 230, 100, 0.8);
+}
+
+/* Form input styles */
+input, select, button {
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus, select:focus, button:focus {
+    border-color: #4caf50;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+/* Color preview box */
+.color-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Khoảng cách giữa các dòng */
+}
+
+.color-group label {
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.color-group input[type="radio"] {
+    margin-right: 10px; /* Khoảng cách giữa radio button và ô màu */
+}
+
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Khoảng cách giữa ô màu và văn bản */
+    vertical-align: middle;
+}
+
+/* Fancy form */
+.fancy-form {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fancy-table {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}

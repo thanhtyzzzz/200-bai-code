@@ -1,0 +1,55 @@
+/* Tổng quan về body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Tiêu đề */
+h2 {
+    text-align: center;
+    color: #555;
+}
+
+/* Bảng phương trình */
+.equation-table {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.equation-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.equation-table input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.equation-table button {
+    padding: 8px 15px;
+    margin-right: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.equation-table button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}

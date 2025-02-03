@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Thông tin Sinh Viên</title>
+        <style>
+            table {
+                width: 50%;
+                margin: auto;
+                border-collapse: collapse;
+                text-align: left;
+            }
+
+            table tr:hover {
+                background-color: blue;
+                color: white;
+            }
+
+            table tr {
+                background-color: white;
+                color: black;
+            }
+
+            table td, table th {
+                padding: 10px;
+                border: 1px solid #ddd;
+            }
+
+            button {
+                margin-top: 20px;
+                display: block;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+        <script>
+            var txt = `
+                <sinhvien>
+                    <mssv>K123456789</mssv>
+                    <hoTen>Quách Thị Bán Bún Bò</hoTen>
+                    <ngaySinh>7/7/1997</ngaySinh>
+                    <gioiTinh>Nữ</gioiTinh>
+                </sinhvien>`;
+        </script>
+        <script>
+            function loadStudentInfo() {
+                var parser = new DOMParser(); 
+                var xmlDoc = parser.parseFromString(txt, "text/xml"); 
+
+                var mssv = xmlDoc.getElementsByTagName("mssv")[0].childNodes[0].nodeValue;
+                var hoTen = xmlDoc.getElementsByTagName("hoTen")[0].childNodes[0].nodeValue;
+                var ngaySinh = xmlDoc.getElementsByTagName("ngaySinh")[0].childNodes[0].nodeValue;
+                var gioiTinh = xmlDoc.getElementsByTagName("gioiTinh")[0].childNodes[0].nodeValue;
+
+                document.getElementById("mssv").innerText = mssv;
+                document.getElementById("hoTen").innerText = hoTen;
+                document.getElementById("ngaySinh").innerText = ngaySinh;
+                document.getElementById("gioiTinh").innerText = gioiTinh;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Chi tiết thông tin Sinh Viên</h3>
+        <table border="1">
+            <tr>
+                <td>Mã Sinh Viên</td>
+                <td id="mssv">---</td>
+            </tr>
+            <tr>
+                <td>Họ Tên</td>
+                <td id="hoTen">---</td>
+            </tr>
+            <tr>
+                <td>Ngày Sinh</td>
+                <td id="ngaySinh">---</td>
+            </tr>
+            <tr>
+                <td>Giới Tính</td>
+                <td id="gioiTinh">---</td>
+            </tr>
+        </table>
+        <button onclick="loadStudentInfo()">Tải thông tin</button>
+    </body>
+</html>

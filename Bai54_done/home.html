@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 54: Hàm toán học</title>
+    <!-- Liên kết đến file CSS -->
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h2>Bài 54: Hàm toán học</h2>
+    <table class="input-table">
+        <tr>
+            <td>a (Số Thứ 1):</td>
+            <td><input type="number" id="inputA" value="30"></td>
+        </tr>
+        <tr>
+            <td>b (Số Thứ 2):</td>
+            <td><input type="number" id="inputB" value="45"></td>
+        </tr>
+        <tr>
+            <td>c (Số Thứ 3):</td>
+            <td><input type="number" id="inputC" value="90"></td>
+        </tr>
+        <tr>
+            <td>KẾT QUẢ:</td>
+            <td><input type="text" id="result" readonly></td>
+        </tr>
+    </table>
+    <br>
+    <!-- Các nút chức năng -->
+    <div class="button-container">
+        <button onclick="calculateMax()">MAX</button>
+        <button onclick="calculateMin()">MIN</button>
+        <button onclick="calculateSin()">sin(a)</button>
+        <button onclick="calculateCos()">cos(a)</button>
+        <button onclick="calculateMultiply()">a*b</button>
+    </div>
+
+    <script>
+        // Hàm JavaScript xử lý các chức năng đã viết trước đó
+        function calculateMax() {
+            const a = parseFloat(document.getElementById('inputA').value) || 0;
+            const b = parseFloat(document.getElementById('inputB').value) || 0;
+            const c = parseFloat(document.getElementById('inputC').value) || 0;
+            const max = Math.max(a, b, c);
+            document.getElementById('result').value = max;
+        }
+
+        function calculateMin() {
+            const a = parseFloat(document.getElementById('inputA').value) || 0;
+            const b = parseFloat(document.getElementById('inputB').value) || 0;
+            const c = parseFloat(document.getElementById('inputC').value) || 0;
+            const min = Math.min(a, b, c);
+            document.getElementById('result').value = min;
+        }
+
+        function calculateSin() {
+            const a = parseFloat(document.getElementById('inputA').value) || 0;
+            const sinValue = Math.sin(a * Math.PI / 180);
+            document.getElementById('result').value = sinValue;
+        }
+
+        function calculateCos() {
+            const a = parseFloat(document.getElementById('inputA').value) || 0;
+            const cosValue = Math.cos(a * Math.PI / 180);
+            document.getElementById('result').value = cosValue;
+        }
+
+        function calculateMultiply() {
+            const a = parseFloat(document.getElementById('inputA').value) || 0;
+            const b = parseFloat(document.getElementById('inputB').value) || 0;
+            const multiply = a * b;
+            document.getElementById('result').value = multiply;
+        }
+    </script>
+</body>
+</html>

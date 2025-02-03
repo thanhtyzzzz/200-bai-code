@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Bài 67</title>
+        <style>
+            table {
+                width: 70%;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+                border: 1px solid #ddd;
+            }
+            th {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+            tr:hover {
+                background-color: yellow;
+            }
+            tr {
+                background-color: white;
+            }
+            #detailSection {
+                margin-top: 20px;
+                text-align: center;
+            }
+            #detailSection table {
+                width: 50%;
+                margin: auto;
+                border-collapse: collapse;
+            }
+            #detailSection th, #detailSection td {
+                padding: 10px;
+                border: 1px solid #ddd;
+            }
+            #detailSection th {
+                background-color: #FFA500;
+            }
+        </style>
+        <script>
+            var dataset = "<sinhviens>";
+            dataset += "<sinhvien>";
+            dataset += "<mssv>K123456789</mssv>";
+            dataset += "<hoTen>Quách Thị Bán Bún Bò</hoTen>";
+            dataset += "<ngaySinh>7/7/1997</ngaySinh>";
+            dataset += "<gioiTinh>Nữ</gioiTinh>";
+            dataset += "</sinhvien>";
+            dataset += "<sinhvien>";
+            dataset += "<mssv>K12345000</mssv>";
+            dataset += "<hoTen>Hồng Lâu Mộng</hoTen>";
+            dataset += "<ngaySinh>2/2/1992</ngaySinh>";
+            dataset += "<gioiTinh>Nam</gioiTinh>";
+            dataset += "</sinhvien>";
+            dataset += "<sinhvien>";
+            dataset += "<mssv>K1674000</mssv>";
+            dataset += "<hoTen>Hồ Văn Đồ</hoTen>";
+            dataset += "<ngaySinh>2/7/1997</ngaySinh>";
+            dataset += "<gioiTinh>Nam</gioiTinh>";
+            dataset += "</sinhvien>";
+            dataset += "</sinhviens>";
+
+            function tai_danhsach_sinhvien() {
+                var parser = new DOMParser();
+                var xmlDoc = parser.parseFromString(dataset, "text/xml");
+                var students = xmlDoc.getElementsByTagName("sinhvien");
+                var tbodysinhvien = document.getElementById("tbodysinhvien");
+
+                for (var i = 0; i < students.length; i++) {
+                    var sti = students[i];
+                    var mssv = sti.getElementsByTagName("mssv")[0].childNodes[0].nodeValue;
+                    var hoTen = sti.getElementsByTagName("hoTen")[0].childNodes[0].nodeValue;
+                    var ngaySinh = sti.getElementsByTagName("ngaySinh")[0].childNodes[0].nodeValue;
+                    var gioiTinh = sti.getElementsByTagName("gioiTinh")[0].childNodes[0].nodeValue;
+
+                    var tr = document.createElement("tr");
+                    tr.innerHTML = `
+                        <td>${mssv}</td>
+                        <td>${hoTen}</td>
+                        <td>${ngaySinh}</td>
+                        <td>${gioiTinh}</td>
+                    `;
+
+                    // Đóng gói giá trị bằng arrow function
+                    tr.addEventListener("click", ((mssv, hoTen, ngaySinh, gioiTinh) => {
+                        return function () {
+                            hien_thi_chi_tiet(mssv, hoTen, ngaySinh, gioiTinh);
+                        };
+                    })(mssv, hoTen, ngaySinh, gioiTinh));
+
+                    tbodysinhvien.appendChild(tr);
+                }
+            }
+
+            function hien_thi_chi_tiet(mssv, hoTen, ngaySinh, gioiTinh) {
+                var detailTable = document.getElementById("detailTable");
+                detailTable.innerHTML = `
+                    <tr>
+                        <th>Mã Sinh Viên</th>
+                        <td>${mssv}</td>
+                    </tr>
+                    <tr>
+                        <th>Họ tên</th>
+                        <td>${hoTen}</td>
+                    </tr>
+                    <tr>
+                        <th>Ngày sinh</th>
+                        <td>${ngaySinh}</td>
+                    </tr>
+                    <tr>
+                        <th>Giới tính</th>
+                        <td>${gioiTinh}</td>
+                    </tr>
+                `;
+                document.getElementById("detailSection").style.display = "block";
+            }
+
+            function sortTable(columnIndex) {
+                var table = document.getElementById("tbodysinhvien");
+                var rows = Array.from(table.rows);
+                var sorted = rows.sort((a, b) => {
+                    var cellA = a.cells[columnIndex].innerText.toLowerCase();
+                    var cellB = b.cells[columnIndex].innerText.toLowerCase();
+                    return cellA.localeCompare(cellB);
+                });
+
+                table.innerHTML = "";
+                sorted.forEach(row => table.appendChild(row));
+            }
+        </script>
+    </head>
+    <body onload="tai_danhsach_sinhvien()">
+        <h3>Danh sách sinh viên</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">MSSV</th>
+                    <th onclick="sortTable(1)">Họ tên</th>
+                    <th onclick="sortTable(2)">Ngày sinh</th>
+                    <th onclick="sortTable(3)">Giới tính</th>
+                </tr>
+            </thead>
+            <tbody id="tbodysinhvien">
+            </tbody>
+        </table>
+        <div id="detailSection" style="display: none;">
+            <h3>Chi tiết thông tin Sinh Viên</h3>
+            <table id="detailTable" border="1"></table>
+        </div>
+    </body>
+</html>

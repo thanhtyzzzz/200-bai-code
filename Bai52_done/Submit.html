@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Page</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <h2>Kết quả liên hệ</h2>
+    <div class="result-container">
+        <!-- Hiển thị họ và tên -->
+        <div class="result-item">
+            <span class="label">Họ và tên :</span>
+            <span class="value" id="result-name"></span>
+        </div>
+        <!-- Hiển thị email -->
+        <div class="result-item">
+            <span class="label">Email :</span>
+            <span class="value" id="result-email"></span>
+        </div>
+        <!-- Hiển thị giới tính -->
+        <div class="result-item">
+            <span class="label">Giới tính :</span>
+            <span class="value" id="result-gender"></span>
+        </div>
+        <!-- Hiển thị nghề nghiệp ổn định -->
+        <div class="result-item">
+            <span class="label">Nghề nghiệp ổn định :</span>
+            <span class="value" id="result-job"></span>
+        </div>
+        <!-- Hiển thị khu vực -->
+        <div class="result-item">
+            <span class="label">Đến từ :</span>
+            <span class="value" id="result-region"></span>
+        </div>
+        <!-- Hiển thị nội dung liên hệ -->
+        <div class="result-item">
+            <span class="label">Nội dung :</span>
+            <span class="value" id="result-message"></span>
+        </div>
+    </div>
+
+    <!-- Script để xử lý hiển thị dữ liệu từ URL -->
+    <script>
+        // Lấy các tham số từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Lấy giá trị từ URL và cung cấp giá trị mặc định nếu không có
+        const name = urlParams.get('name') || 'Không có thông tin'; // Họ và tên
+        const email = urlParams.get('email') || 'Không có thông tin'; // Email
+        const gender = urlParams.get('gender') || 'Không có thông tin'; // Giới tính
+        const job = urlParams.get('job') ? 'Có' : 'Không'; // Nghề nghiệp ổn định (true/false)
+        const region = urlParams.get('region') || 'Không có thông tin'; // Đến từ
+        const message = urlParams.get('message') || 'Không có thông tin'; // Nội dung liên hệ
+
+        // Hiển thị giá trị vào các phần tử HTML tương ứng
+        document.getElementById('result-name').textContent = name; // Gán họ và tên
+        document.getElementById('result-email').textContent = email; // Gán email
+        document.getElementById('result-gender').textContent = gender; // Gán giới tính
+        document.getElementById('result-job').textContent = job; // Gán nghề nghiệp ổn định
+        document.getElementById('result-region').textContent = region; // Gán khu vực
+        document.getElementById('result-message').textContent = message; // Gán nội dung
+    </script>
+
+</body>
+</html>

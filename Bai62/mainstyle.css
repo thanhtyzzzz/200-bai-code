@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table td,
+th {
+    border: 1px solid black;
+}
+
+thead {
+    background-color: red; /* Set the background of the header to red */
+    color: white;
+}
+
+tfoot {
+    background-color: #2e74b5;
+    color: white;
+}
+
+td {
+    background-color: #2e74b5;
+}
+
+tbody tr:hover {
+    background-color: yellow;
+    cursor: pointer;
+}

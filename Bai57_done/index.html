@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xử lý sự kiện Text Change</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h2>Xử lý sự kiện Text Change</h2>
+    <table class="product-table">
+        <thead>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C112</td>
+                <td>Chuột Quang</td>
+                <td><span class="price" data-price="10">10$</span></td>
+                <td><input type="number" class="quantity" oninput="calculateRow(this)" min="0"></td>
+                <td><input type="text" class="subtotal" readonly></td>
+            </tr>
+            <tr>
+                <td>B124</td>
+                <td>Bàn Phím</td>
+                <td><span class="price" data-price="20">20$</span></td>
+                <td><input type="number" class="quantity" oninput="calculateRow(this)" min="0"></td>
+                <td><input type="text" class="subtotal" readonly></td>
+            </tr>
+            <tr>
+                <td>U125</td>
+                <td>USB KingMax</td>
+                <td><span class="price" data-price="15">15$</span></td>
+                <td><input type="number" class="quantity" oninput="calculateRow(this)" min="0"></td>
+                <td><input type="text" class="subtotal" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="total-container">
+        <label for="total">Total:</label>
+        <input type="text" id="total" readonly>
+        <button onclick="calculateTotal()">Tổng Cộng</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

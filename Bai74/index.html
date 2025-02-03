@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng điểm Sinh viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Bảng điểm Sinh viên</h2>
+    <table id="bangdiemTable">
+        <thead>
+            <tr>
+                <th>Mã Sinh Viên</th>
+                <th>Tên Sinh Viên</th>
+                <th>Toán</th>
+                <th>Lý</th>
+                <th>Hóa</th>
+                <th>Điểm Trung Bình</th>
+                <th>Kết Quả</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        // Hàm lấy dữ liệu từ JSON qua AJAX
+        function loadBangDiem() {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    const data = JSON.parse(this.responseText);
+                    hienThiBangDiem(data);
+                }
+            };
+
+            xhr.open("GET", "databaseSinhVien.json", true);
+            xhr.send();
+        }
+
+        // Hàm hiển thị bảng điểm lên Table
+        function hienThiBangDiem(data) {
+            const tableBody = document.getElementById("bangdiemTable").querySelector("tbody");
+            tableBody.innerHTML = ""; // Xóa dữ liệu cũ (nếu có)
+
+            // Lặp qua danh sách sinh viên
+            data.forEach(sv => {
+                const monHoc = sv.MonHocs;
+                const toan = monHoc.find(mh => mh.MaMonHoc === "MH1").Diem;
+                const ly = monHoc.find(mh => mh.MaMonHoc === "MH2").Diem;
+                const hoa = monHoc.find(mh => mh.MaMonHoc === "MH3").Diem;
+                const diemTB = ((toan + ly + hoa) / 3).toFixed(2);
+                const ketQua = diemTB >= 5 ? "Đậu" : "Rớt";
+
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${sv.Ma}</td>
+                    <td>${sv.Ten}</td>
+                    <td>${toan}</td>
+                    <td>${ly}</td>
+                    <td>${hoa}</td>
+                    <td>${diemTB}</td>
+                    <td>${ketQua}</td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        // Tải dữ liệu khi trang được load
+        document.addEventListener("DOMContentLoaded", loadBangDiem);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h2>Giải phương trình bậc 2</h2>
+    <table class="equation-table">
+        <tr>
+            <td>Hệ số a:</td>
+            <td><input type="number" id="coeffA" value="1"></td>
+        </tr>
+        <tr>
+            <td>Hệ số b:</td>
+            <td><input type="number" id="coeffB" value="-2"></td>
+        </tr>
+        <tr>
+            <td>Hệ số c:</td>
+            <td><input type="number" id="coeffC" value="1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button onclick="solveEquation()">Giải</button>
+                <button onclick="resetFields()">Tiếp</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Kết quả:</td>
+            <td><input type="text" id="result" readonly></td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

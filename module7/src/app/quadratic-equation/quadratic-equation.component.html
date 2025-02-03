@@ -1,0 +1,29 @@
+<div class="container">
+    <h3>Giải phương trình bậc 2 online</h3>
+    
+    <div class="inline">
+      <label>Hệ số a:</label>
+      <input type="number" [(ngModel)]="a">
+    </div>
+    
+    <div>
+      <label>Hệ số b:</label>
+      <input type="number" [(ngModel)]="b">
+    </div>
+    
+    <div>
+      <label>Hệ số c:</label>
+      <input type="number" [(ngModel)]="c">
+    </div>
+    <br>
+    
+    <div>
+      <label>Kết quả:</label>
+      <p>{{ result }}</p>
+    </div>
+    <div class="center">
+      <button (click)="solve()">Giải phương trình</button>
+      <button (click)="clear()">Xóa trắng</button>
+    </div>
+    
+</div>

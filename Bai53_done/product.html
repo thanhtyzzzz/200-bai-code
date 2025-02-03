@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <!-- Form để nhập số lượng sản phẩm và tính tổng tiền -->
+    <form action="GET.html" method="get" id="inputForm">
+        <table>
+            <!-- Phần tiêu đề bảng -->
+            <thead>
+                <th>Part Number</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Item table</th>
+            </thead>
+            <!-- Phần nội dung bảng -->
+            <tbody>
+                <!-- Hàng 1: Sản phẩm Mouse -->
+                <tr>
+                    <td>C112</td>
+                    <td>Mouse</td>
+                    <!-- Giá được lưu trong thuộc tính data-price -->
+                    <td id="price1" data-price="19.95">19.95$</td>
+                    <!-- Ô nhập số lượng -->
+                    <td><input type="number" name="qty1" id="qty1"></td>
+                    <!-- Ô nhập thêm thông tin -->
+                    <td><input type="text" name="item1"></td>
+                </tr>
+                <!-- Hàng 2: Sản phẩm Keyboard US -->
+                <tr>
+                    <td>B124</td>
+                    <td>Keyboard US</td>
+                    <td id="price2" data-price="29.95">29.95$</td>
+                    <td><input type="number" name="qty2" id="qty2"></td>
+                    <td><input type="text" name="item2"></td>
+                </tr>
+                <!-- Hàng 3: Sản phẩm USB KingMax -->
+                <tr>
+                    <td>U125</td>
+                    <td>USB KingMax</td>
+                    <td id="price3" data-price="39.95">39.95$</td>
+                    <td><input type="number" name="qty3" id="qty3"></td>
+                    <td><input type="text" name="item3"></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <!-- Phần tính tổng và hiển thị -->
+        <div class="right">
+            <span>Total:</span>
+            <!-- Ô hiển thị tổng tiền -->
+            <input type="number" name="total" id="total">
+
+            <br>
+            <!-- Nút tính tổng -->
+            <button type="button" onclick="calculateTotal()">Sum</button>
+        </div>
+    </form>
+
+    <!-- Script JavaScript để tính tổng tiền -->
+    <script>
+        function calculateTotal() {
+            let totalQty = 0; // Tổng số lượng sản phẩm
+            let totalPrice = 0; // Tổng giá trị đơn hàng
+
+            // Lặp qua từng sản phẩm
+            for (let i = 1; i <= 3; i++) {
+                const qtyInput = document.querySelector('#qty' + i); // Lấy ô nhập số lượng
+                const priceCell = document.querySelector('#price' + i); // Lấy ô chứa giá
+
+                if (qtyInput && priceCell) {
+                    const qtyValue = parseFloat(qtyInput.value) || 0; // Lấy giá trị số lượng (nếu không nhập thì mặc định là 0)
+                    const priceValue = parseFloat(priceCell.getAttribute("data-price")) || 0; // Lấy giá trị giá từ thuộc tính data-price
+
+                    totalQty += qtyValue; // Cộng dồn số lượng
+                    totalPrice += qtyValue * priceValue; // Cộng dồn giá trị (số lượng * giá)
+                }
+            }
+
+            // Hiển thị tổng giá trị trong ô tổng tiền
+            document.querySelector('#total').value = totalPrice;
+
+            // Cập nhật action của form để gửi kèm giá trị tổng
+            document.getElementById("inputForm").setAttribute("action", `./get.html?total=${totalPrice}`);
+            
+            // Submit form
+            document.getElementById("inputForm").submit();
+        }
+    </script>
+</body>
+</html>

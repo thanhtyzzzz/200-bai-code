@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neonatal Feeding Study</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="Logo.gif" alt="St. Mary's of Northland Pines Logo" class="logo">
+    </div>
+    <!-- Form container -->
+    <div class="container">
+        <h2>Neonatal Feeding Study</h2>
+        <form id="neonatalForm">
+            <p><strong>Today is:</strong> <span id="todayDate"></span></p>
+            <p>
+                1) Name (first, last): <input type="text" id="name" placeholder="Enter name">
+            </p>
+            <p>
+                2) Medical Record #: <input type="text" id="medicalRecord">
+            </p>
+            <p>
+                3) Date of birth: <input type="date" id="dob">
+            </p>
+            <p>
+                4) Physician: 
+                <select id="physician" onchange="checkPhysician()">
+                    <option value="Dr. Warren Albert">Dr. Warren Albert</option>
+                    <option value="Dr. Sarah Smith">Dr. Sarah Smith</option>
+                    <option value="Other">Other</option>
+                </select>
+                If other (specify): <input type="text" id="otherPhysician">
+            </p>
+            <p>
+                5) 1 Minute APGAR Score: <br>
+                Activity <input type="number" id="activity" min="0" max="2" value="0" oninput="validateScore(this)"> <br>
+                Pulse <input type="number" id="pulse" min="0" max="2" value="0" oninput="validateScore(this)"> <br>
+                Grimace (Reflex, Irritability) <input type="number" id="grimace" min="0" max="2" value="0" oninput="validateScore(this)"> <br>
+                Appearance (Skin Color) <input type="number" id="appearance" min="0" max="2" value="0" oninput="validateScore(this)"> <br>
+                Respiration <input type="number" id="respiration" min="0" max="2" value="0" oninput="validateScore(this)"> <br>
+            </p>
+            <p>
+                TOTAL: <input type="text" id="total" readonly>
+            </p>
+            <p>
+                6) Birth weight (gms): <input type="number" id="birthWeight" min="1200" placeholder="Enter weight">
+            </p>
+            <p>
+                7) Parental Consent (required): 
+                <input type="checkbox" id="consent">
+            </p>
+            <button type="button" onclick="register()">Register</button>
+            <button type="button" onclick="reloadPage()">Reload Page</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

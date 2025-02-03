@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Danh sách sản phẩm</h2>
+    <button onclick="hienThiSanPham()">Hiển thị</button>
+    <table id="sanphamTable">
+        <thead>
+            <tr>
+                <th>Mã Sản Phẩm</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Đơn giá</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        // JSON Array chứa danh sách sản phẩm
+        const sanphams = [
+            { ma: "sp1", ten: "Cocacola", gia: 15000 },
+            { ma: "sp2", ten: "Pepsi", gia: 25000 },
+            { ma: "sp3", ten: "Sting", gia: 17000 }
+        ];
+
+        // Hàm hiển thị danh sách sản phẩm lên Table
+        function hienThiSanPham() {
+            const tableBody = document.getElementById("sanphamTable").querySelector("tbody");
+            tableBody.innerHTML = ""; // Xóa dữ liệu cũ (nếu có)
+
+            // Lặp qua danh sách sản phẩm và thêm vào Table
+            sanphams.forEach(sp => {
+                const tr = document.createElement("tr");
+
+                const tdMa = document.createElement("td");
+                tdMa.innerText = sp.ma;
+
+                const tdTen = document.createElement("td");
+                tdTen.innerText = sp.ten;
+
+                const tdGia = document.createElement("td");
+                tdGia.innerText = sp.gia;
+
+                tr.appendChild(tdMa);
+                tr.appendChild(tdTen);
+                tr.appendChild(tdGia);
+
+                tableBody.appendChild(tr);
+            });
+        }
+    </script>
+</body>
+</html>

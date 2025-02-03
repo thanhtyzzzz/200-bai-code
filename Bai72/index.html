@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Danh sách sản phẩm</h2>
+    <button onclick="hienThiSanPham()">Hiển thị</button>
+    <table id="sanphamTable">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Tên</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        // JSON Array chứa danh sách sản phẩm
+        const data = {
+            "Sanphams": [
+                {
+                    "MaSP": "sp_1xxx",
+                    "TenSP": "DELL Inspiron 14NR",
+                    "SoLuong": 100,
+                    "DonGia": 150000
+                },
+                {
+                    "MaSP": "sp_2yyyy",
+                    "TenSP": "HP Inspiron 113",
+                    "SoLuong": 130,
+                    "DonGia": 140000
+                }
+            ]
+        };
+
+        // Hàm hiển thị danh sách sản phẩm lên Table
+        function hienThiSanPham() {
+            const tableBody = document.getElementById("sanphamTable").querySelector("tbody");
+            tableBody.innerHTML = ""; // Xóa dữ liệu cũ (nếu có)
+
+            // Lặp qua danh sách sản phẩm và thêm vào Table
+            data.Sanphams.forEach(sp => {
+                const tr = document.createElement("tr");
+
+                const tdMaSP = document.createElement("td");
+                tdMaSP.innerText = sp.MaSP;
+
+                const tdTenSP = document.createElement("td");
+                tdTenSP.innerText = sp.TenSP;
+
+                const tdSoLuong = document.createElement("td");
+                tdSoLuong.innerText = sp.SoLuong;
+
+                const tdDonGia = document.createElement("td");
+                tdDonGia.innerText = sp.DonGia;
+
+                tr.appendChild(tdMaSP);
+                tr.appendChild(tdTenSP);
+                tr.appendChild(tdSoLuong);
+                tr.appendChild(tdDonGia);
+
+                tableBody.appendChild(tr);
+            });
+        }
+    </script>
+</body>
+</html>

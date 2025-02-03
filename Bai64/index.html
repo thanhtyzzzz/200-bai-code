@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h1>Dynamic Table</h1>
+    <!-- Hiển thị giờ hiện tại -->
+    <div id="clock" class="clock"></div>
+
+    <!-- Bảng chính -->
+    <table id="dynamicTable" border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Cột 1</th>
+                <th>Cột 2</th>
+                <th>Cột 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Thêm dòng mới ở đây</td>
+                <td>Thêm dòng mới ở đây</td>
+                <td>Thêm dòng mới ở đây</td>
+            </tr>
+            <tr>
+                <td>Dòng 1 cột 1</td>
+                <td>Dòng 1 cột 2</td>
+                <td>Dòng 1 cột 3</td>
+            </tr>
+            <tr>
+                <td>Dòng 2 cột 1</td>
+                <td>Dòng 2 cột 2</td>
+                <td>Dòng 2 cột 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Các nút thao tác -->
+    <div class="controls">
+        <button id="addRow">Thêm vào</button>
+        <button id="deleteRow">Xóa</button>
+        <button id="showOnlyRow">Chỉ hiển thị dòng</button>
+        <button id="showOnlyCol">Chỉ hiển thị cột</button>
+        <button id="showAllCols">Hiện tất cả</button>
+        <button id="openNewPage">Mở một trang mới</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

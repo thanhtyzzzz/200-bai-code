@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML DOM Parser</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h1>Bài 67: XML - DOM Parser</h1>
+    <div>
+        <button onclick="loadXML()">Hiển thị danh sách</button>
+    </div>
+    <table id="studentTable" border="1">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Mã Sinh Viên</th>
+                <th onclick="sortTable(1)">Họ Tên</th>
+                <th onclick="sortTable(2)">Ngày Sinh</th>
+                <th onclick="sortTable(3)">Giới Tính</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="detailSection" style="display:none;">
+        <h3>Chi tiết thông tin Sinh Viên</h3>
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td>Mã Sinh Viên</td>
+                    <td id="detailMSSV">---</td>
+                </tr>
+                <tr>
+                    <td>Họ Tên</td>
+                    <td id="detailHoTen">---</td>
+                </tr>
+                <tr>
+                    <td>Ngày Sinh</td>
+                    <td id="detailNgaySinh">---</td>
+                </tr>
+                <tr>
+                    <td>Giới Tính</td>
+                    <td id="detailGioiTinh">---</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

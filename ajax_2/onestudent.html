@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Danh sách sinh viên</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f9f9f9;
+            }
+
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+                background-color: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            th, td {
+                padding: 10px;
+                border: 1px solid #ddd;
+                text-align: center;
+            }
+
+            th {
+                background-color: #4CAF50;
+                color: white;
+                font-size: 18px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            button {
+                display: block;
+                margin: 20px auto;
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+
+            /* Chỉ tô màu cho ô giới tính */
+            .male {
+                background-color: #ffeb3b; /* Màu vàng cho Nam */
+            }
+
+            .female {
+                background-color: #00bcd4; /* Màu cyan cho Nữ */
+            }
+        </style>
+        <script>
+            function hienthi_sinhvien() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "dataset.xml", true);
+                xhr.send();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Xử lý khi load được data
+                        var xmlDoc = xhr.responseXML;
+                        var sinhviens = xmlDoc.getElementsByTagName("sinhvien");
+                        var tableBody = document.getElementById("tableBody");
+                        tableBody.innerHTML = ""; // Xóa dữ liệu cũ trong bảng
+
+                        // Lặp qua từng sinh viên và thêm vào bảng
+                        for (var i = 0; i < sinhviens.length; i++) {
+                            var mssv = sinhviens[i].getElementsByTagName("mssv")[0].childNodes[0].nodeValue;
+                            var hoTen = sinhviens[i].getElementsByTagName("hoTen")[0].childNodes[0].nodeValue;
+                            var ngaySinh = sinhviens[i].getElementsByTagName("ngaySinh")[0].childNodes[0].nodeValue;
+                            var gioiTinh = sinhviens[i].getElementsByTagName("gioiTinh")[0].childNodes[0].nodeValue;
+                            var hinh = sinhviens[i].getElementsByTagName("hinh")[0].childNodes[0].nodeValue;
+
+                            // Thêm hàng vào bảng
+                            var row = tableBody.insertRow();
+
+                            var cellMssv = row.insertCell(0);
+                            var cellHoTen = row.insertCell(1);
+                            var cellNgaySinh = row.insertCell(2);
+                            var cellGioiTinh = row.insertCell(3);
+                            var cellHinh = row.insertCell(4);
+
+                            cellMssv.innerText = mssv;
+                            cellHoTen.innerText = hoTen;
+                            cellNgaySinh.innerText = ngaySinh;
+
+                            // Thêm màu cho ô giới tính
+                            cellGioiTinh.innerText = gioiTinh;
+                            if (gioiTinh === "Nam") {
+                                cellGioiTinh.classList.add("male");
+                            } else if (gioiTinh === "Nữ") {
+                                cellGioiTinh.classList.add("female");
+                            }
+
+                            var img = document.createElement("img");
+                            img.setAttribute("src", "images/" + hinh);
+                            img.setAttribute("width", "50");
+                            img.setAttribute("height", "50");
+                            cellHinh.appendChild(img);
+                        }
+                    } else {
+                        // Xử lý khi không load được data
+                        console.log("Không thể tải dữ liệu từ file XML");
+                    }
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Danh sách sinh viên</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã</th>
+                    <th>Họ Tên</th>
+                    <th>Ngày Sinh</th>
+                    <th>Giới Tính</th>
+                    <th>Hình</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Dữ liệu sẽ được thêm động tại đây -->
+            </tbody>
+        </table>
+        <button onclick="hienthi_sinhvien()">Hiển thị Danh sách Sinh viên</button>
+    </body>
+</html>

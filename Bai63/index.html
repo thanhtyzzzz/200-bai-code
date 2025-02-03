@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thành viên</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h1>✨ Đăng ký thành viên ✨</h1>
+    <form id="registrationForm" class="fancy-form">
+        <table>
+            <tr>
+                <td><label for="name">Tên (*)</label></td>
+                <td><input type="text" id="name" placeholder="Nhập tên của bạn" required></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh (*)</td>
+                <td>
+                    Ngày:
+                    <select id="day"></select>
+                    Tháng:
+                    <select id="month"></select>
+                    Năm:
+                    <select id="year"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>Giới tính (*)</td>
+                <td>
+                    <input type="radio" name="gender" value="Nam" checked> Nam
+                    <input type="radio" name="gender" value="Nữ"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email (*)</label></td>
+                <td><input type="email" id="email" placeholder="Nhập email của bạn" required></td>
+            </tr>
+            <tr>
+                <td>Sở thích của bạn</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="Mua sắm"> Mua sắm<br>
+                    <input type="checkbox" name="hobby" value="Du lịch"> Du lịch<br>
+                    <input type="checkbox" name="hobby" value="Tán gẫu"> Tán gẫu<br>
+                    <input type="checkbox" name="hobby" value="Đọc sách"> Đọc sách<br>
+                    <input type="checkbox" name="hobby" value="Nghe nhạc"> Nghe nhạc<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Màu yêu thích của bạn</td>
+                <td>
+                    <div class="color-group">
+                        <label>
+                            <input type="radio" name="color" value="Màu xanh da trời" checked>
+                            <span class="color-box" style="background-color: skyblue;"></span> Màu xanh da trời
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="Màu đỏ">
+                            <span class="color-box" style="background-color: red;"></span> Màu đỏ
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="Màu vàng">
+                            <span class="color-box" style="background-color: gold;"></span> Màu vàng
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="Màu xanh lá cây">
+                            <span class="color-box" style="background-color: green;"></span> Màu xanh lá cây
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="Màu tím">
+                            <span class="color-box" style="background-color: purple;"></span> Màu tím
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="buttons">
+                    <button type="button" id="registerBtn">🎉 Đăng ký</button>
+                    <button type="reset" id="resetBtn">↩️ Tiếp</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h2>Danh sách thành viên</h2>
+    <table id="memberTable" class="fancy-table">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Giới tính</th>
+                <th>Năm sinh</th>
+                <th>Sở thích</th>
+                <th>Màu yêu thích</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

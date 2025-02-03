@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A IMPLE COLOR PICKER</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h1>A IMPLE COLOR PICKER</h1>
+    <div class="wrapper">
+        <div class="settings">
+            <h3>Background Color</h3>
+            RED: <input type="text" id="background-r" value="FF" maxlength="2">
+            GREEN: <input type="text" id="background-g" value="FF" maxlength="2">
+            BLUE: <input type="text" id="background-b" value="FF" maxlength="2">
+
+            <h3>Text Color</h3>
+            RED: <input type="text" id="text-r" value="00" maxlength="2">
+            GREEN: <input type="text" id="text-g" value="00" maxlength="2">
+            BLUE: <input type="text" id="text-b" value="00" maxlength="2">
+
+            <div class="buttons">
+                <button onclick="applyColors()">Apply Colors</button>
+                <button onclick="resetColors()">Reset</button>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h3>Preview</h3>
+            <p id="preview-text">
+                "To be, or not to be, that is the question. Whether 'tis nobler in the mind to suffer
+                The slings and arrows of outrageous fortune."
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

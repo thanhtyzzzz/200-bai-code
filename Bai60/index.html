@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <div id="container">
+        <ul>
+            <li><a href="#" onclick="handleHomeClick()">HOME</a></li>
+            <li><a href="#" onclick="handleHTMLClick()">HTML</a></li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="#" onclick="handleLessonClick(1)">CSS CĂN BẢN</a></li>
+                    <li><a href="#" onclick="handleLessonClick(2)">GIAO DIỆN VỚI CSS</a></li>
+                    <li><a href="#" onclick="handleLessonClick(3)">CSS NÂNG CAO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">JAVASCRIPT</a>
+                <ul>
+                    <li><a href="#" onclick="handleLessonClick(1)">LESSON 1</a></li>
+                    <li><a href="#" onclick="handleLessonClick(2)">LESSON 2</a></li>
+                    <li><a href="#" onclick="handleLessonClick(3)">LESSON 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="handleHTMLDOMClick()">HTML DOM</a></li>
+            <li><a href="#" onclick="handleASPClick()">ASP</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

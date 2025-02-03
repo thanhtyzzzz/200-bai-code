@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Thông tin chi tiết User</h2>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>Thông tin</th>
+                <th>Chi tiết</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        // Dữ liệu JSON của User
+        var user = {
+            "id": "100005823642721",
+            "first_name": "Duy Thanh",
+            "gender": "male",
+            "last_name": "Trần",
+            "link": "https://www.facebook.com/duythanhcse",
+            "locale": "en_US",
+            "birthday": "20/12/1961",
+            "name": "Duy Thanh Trần",
+            "username": "duythanhcse"
+        };
+
+        // Hiển thị thông tin User lên Table
+        function displayUserInfo(user) {
+            var tbody = document.getElementById("userTable").querySelector("tbody");
+            tbody.innerHTML = ""; // Xóa dữ liệu cũ (nếu có)
+
+            // Duyệt qua từng thuộc tính trong JSON object
+            for (var key in user) {
+                if (user.hasOwnProperty(key)) {
+                    var tr = document.createElement("tr");
+
+                    var tdKey = document.createElement("td");
+                    tdKey.innerText = key;
+
+                    var tdValue = document.createElement("td");
+                    if (key === "link") {
+                        // Nếu là link, tạo thẻ <a> để người dùng có thể bấm
+                        var a = document.createElement("a");
+                        a.href = user[key];
+                        a.target = "_blank";
+                        a.innerText = user[key];
+                        tdValue.appendChild(a);
+                    } else {
+                        tdValue.innerText = user[key];
+                    }
+
+                    tr.appendChild(tdKey);
+                    tr.appendChild(tdValue);
+                    tbody.appendChild(tr);
+                }
+            }
+        }
+
+        // Gọi hàm hiển thị thông tin User
+        displayUserInfo(user);
+    </script>
+</body>
+</html>

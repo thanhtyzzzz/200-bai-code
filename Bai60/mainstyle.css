@@ -1,0 +1,95 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #f0f4f8, #d9e2ec);
+    color: #333;
+}
+
+/* Container menu */
+#container {
+    border: 2px solid #3c91e6;
+    background: linear-gradient(180deg, #4d77ff, #3461c1);
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Danh sách menu chính */
+#container ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#container ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+/* Link trong menu */
+#container ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#container ul li a:hover {
+    background-color: orange;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Submenu ẩn */
+#container ul li ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: none;
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+/* Submenu hiện khi hover */
+#container ul li:hover ul {
+    display: block;
+}
+
+/* Các item trong submenu */
+#container ul li ul li {
+    width: 150px;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+#container ul li ul li:last-child {
+    border-bottom: none;
+}
+
+#container ul li ul li a {
+    color: #333;
+    padding: 10px;
+    text-align: left;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+#container ul li ul li a:hover {
+    background-color: orange; /* Đổi màu nền thành cam khi hover */
+    color: white;
+    border-radius: 0;
+}

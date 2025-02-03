@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xử lý chuỗi</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <h2>Sử dụng các hàm Xử Lý Chuỗi</h2>
+    <table class="string-table">
+        <tr>
+            <td><strong>Nhập dữ liệu</strong></td>
+            <td><strong>Kết quả</strong></td>
+        </tr>
+        <tr>
+            <td><textarea id="inputString" rows="5" cols="30"></textarea></td>
+            <td><textarea id="outputString" rows="5" cols="30" readonly></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="copyInput()">Nhập dữ liệu</button>
+                <button onclick="toUpperCase()">Đổi thành chữ hoa</button>
+                <button onclick="toLowerCase()">Đổi thành chữ thường</button>
+                <button onclick="capitalizeEachWord()">In mỗi từ trên một dòng</button>
+                <button onclick="countWords()">Đếm số từ</button>
+                <button onclick="reverseString()">Đảo ngược chuỗi</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <a href="https://www.w3schools.com" target="_blank">Xem Website xử lý chuỗi w3c</a>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

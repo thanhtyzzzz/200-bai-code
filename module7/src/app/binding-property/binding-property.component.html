@@ -1,0 +1,9 @@
+<div>
+    <h1>Binding Property</h1>
+    <input [id]="nameid" [value]="name" /><br><br>
+    <input [id]="emailid" [value]="email" [disabled]="isDisabled" /><br><br>
+    <p> Name: {{ name }} </p>
+    <p> Email: {{ email }} </p>
+    <button (click)="toggleDisable()">Toggle Email Disable</button>
+</div>
+  

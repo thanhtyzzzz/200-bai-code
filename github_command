@@ -1,0 +1,48 @@
+1. Kiểm tra trạng thái
+Để xem các file đã thay đổi hoặc thêm mới, dùng lệnh:
+
+bash
+Copy code
+git status
+2. Thêm file vào staging area
+Thêm tất cả các thay đổi:
+
+bash
+Copy code
+git add .
+Lưu ý: Nếu chỉ muốn thêm file cụ thể, sử dụng:
+
+bash
+Copy code
+git add <tên-file>
+3. Tạo commit
+Tạo một commit với thông điệp mô tả nội dung thay đổi:
+
+bash
+Copy code
+git commit -m "Mô tả thay đổi của bạn"
+4. Đẩy mã nguồn lên GitHub
+Đẩy các commit mới lên branch chính trên GitHub:
+
+bash
+Copy code
+git push origin main
+Lưu ý: Nếu branch mặc định là master, thay main bằng master:
+
+bash
+Copy code
+git push origin master
+5. Nếu gặp lỗi "failed to push some refs"
+Trước khi push, hãy pull mã nguồn từ GitHub để đồng bộ:
+bash
+Copy code
+git pull origin main
+Sau đó, thực hiện lại các lệnh add, commit, và push.
+Tóm tắt các lệnh cần dùng
+Khi muốn cập nhật code lên GitHub, chạy các lệnh sau trong thư mục dự án:
+
+bash
+Copy code
+git add .
+git commit -m "Mô tả thay đổi của bạn"
+git push origin main

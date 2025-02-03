@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Màu nền sáng hơn */
+    margin: 0;
+    padding: 20px;
+    max-width: 800px; /* Tăng độ rộng tối đa */
+    margin: auto;
+}
+
+h2 {
+    color: #2c3e50; /* Màu xanh đậm */
+    font-size: 1.5rem; /* Tăng kích thước tiêu đề */
+    text-align: center; /* Canh giữa tiêu đề */
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px; /* Bo góc mềm mại hơn */
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tăng độ nổi bật của hộp */
+}
+
+td {
+    vertical-align: middle;
+    padding: 10px 15px; /* Tăng padding cho bảng */
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: calc(100% - 16px); /* Đảm bảo hộp input vừa khít */
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    display: block;
+    border: 1px solid #ced4da; /* Màu viền dịu nhẹ hơn */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff; /* Đổi màu viền khi focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hiệu ứng bóng mờ khi focus */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Phóng to nhẹ cho dễ nhấn */
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #007bff; /* Màu xanh nổi bật */
+    color: white;
+    padding: 12px 25px; /* Padding thoải mái hơn */
+    margin: 10px 5px 0 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hiệu ứng mượt khi hover */
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+}
+
+.result-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.result-item {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+label, .label {
+    font-weight: bold;
+    color: #495057; /* Màu xám đậm */
+}
+
+.value {
+    color: #212529; /* Màu đen xám */
+}
+
+.right {
+    text-align: right;
+}
