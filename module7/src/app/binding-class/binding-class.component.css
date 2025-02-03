@@ -1,23 +1,68 @@
+/* Định nghĩa các class cho các trạng thái khác nhau */
 .text-success {
-    color: darkgreen;
-  }
-  
-  .text-error {
-    color: darkred;
-  }
-  
-  .text-primary {
-    color: navy;
-  }
-  
-  .text-normal {
-    font-style: italic;
-  }
-  
-  .text-complexity {
-    font-weight: bold;
-    font-style: italic;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
-    color: blue;
-  }
+  color: darkgreen;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.text-success:hover {
+  color: limegreen; /* Màu sáng khi hover */
+}
+
+.text-error {
+  color: darkred;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.text-error:hover {
+  color: red; /* Màu sáng khi hover */
+}
+
+.text-primary {
+  color: navy;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.text-primary:hover {
+  color: deepskyblue; /* Màu sáng khi hover */
+}
+
+.text-normal {
+  font-style: italic;
+  color: #6c757d; /* Màu xám */
+  transition: color 0.3s ease-in-out;
+}
+
+.text-normal:hover {
+  color: #343a40; /* Màu tối hơn khi hover */
+}
+
+.text-complexity {
+  font-weight: bold;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  color: blue;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.text-complexity:hover {
+  color: #0044cc; /* Màu xanh dương đậm khi hover */
+  transform: scale(1.1); /* Tăng kích thước nhẹ khi hover */
+}
+
+/* Thêm một số kiểu hiệu ứng cho các tiêu đề */
+h1, h2 {
+  font-family: 'Arial', sans-serif;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease-in-out;
+}
+
+h1:hover, h2:hover {
+  background-color: #e2e6ea; /* Màu nền sáng hơn khi hover */
+}

@@ -1,50 +1,102 @@
+/* Container chính */
 .container {
-    border: 1px solid #007BFF; 
-    border-radius: 5px; 
-    padding: 20px; 
-    width: 300px; 
-    margin: 20px auto;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
-}
-
-.container h3 {
-    text-align: center; 
-    color: #007BFF; 
-}
-
-.container label {
-    margin: 0 10px 10px 0;
-}
-
-.container input[type="number"] {
-    width: 73%; 
-    padding: 8px; 
-    margin-top: 10px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-}
-
-.container p {
-    font-weight: bold; 
-    margin-top: 10px; 
-    color: #28a745; 
-}
-
-.container button {
-    background-color: #007BFF; 
-    color: white; 
-    border: none; 
-    border-radius: 4px; 
-    padding: 10px 15px; 
-    margin: 5px 5px; 
-    cursor: pointer; 
-}
-
-.container button:hover {
-    background-color: #0056b3;
-}
-
-.center {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px 20px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Tiêu đề */
+  .heading {
     text-align: center;
-}
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  /* Nhóm input */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Inline group (cho hàng ngang) */
+  .inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Nhãn input */
+  .input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Các trường nhập liệu */
+  .input-field {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Kết quả */
+  .result-group {
+    margin-bottom: 20px;
+  }
+  
+  .result-group label {
+    font-weight: bold;
+    display: block;
+  }
+  
+  .result {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-top: 5px;
+  }
+  
+  /* Nút bấm */
+  .center {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Nút bấm Xóa trắng với màu sắc khác */
+  .btn.clear {
+    background-color: #dc3545;
+  }
+  
+  .btn.clear:hover {
+    background-color: #c82333;
+  }
+  

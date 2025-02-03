@@ -1,15 +1,29 @@
-<p>binding-two-way works!</p>
+<div class="form-container">
+    <p class="intro-text">Binding Two-Way Example</p>
 
-<p>Name: <input [(ngModel)]="name" type="text"></p>
-<p>Your name: {{ name }}</p>
+    <div class="input-group">
+        <label for="name">Name:</label>
+        <input [(ngModel)]="name" id="name" type="text" class="input-field">
+    </div>
+    <p class="output-text">Your name: <span>{{ name }}</span></p>
 
-<p>Address: <input [(ngModel)]="address" type="text"></p>
-<p>Your address: {{ address }}</p>
+    <div class="input-group">
+        <label for="address">Address:</label>
+        <input [(ngModel)]="address" id="address" type="text" class="input-field">
+    </div>
+    <p class="output-text">Your address: <span>{{ address }}</span></p>
 
-<p>Email: <input [(ngModel)]="email" type="email"></p>
-<p>Your email: {{ email }}</p>
+    <div class="input-group">
+        <label for="email">Email:</label>
+        <input [(ngModel)]="email" id="email" type="email" class="input-field">
+    </div>
+    <p class="output-text">Your email: <span>{{ email }}</span></p>
 
-<p>Phone: <input [(ngModel)]="phone" type="tel"></p>
-<p>Your phone: {{ phone }}</p>
+    <div class="input-group">
+        <label for="phone">Phone:</label>
+        <input [(ngModel)]="phone" id="phone" type="tel" class="input-field">
+    </div>
+    <p class="output-text">Your phone: <span>{{ phone }}</span></p>
 
-<button (click)="setDefaultAddress()">Set default</button>
+    <button class="btn" (click)="setDefaultAddress()">Set Default Address</button>
+</div>

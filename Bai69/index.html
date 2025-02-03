@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,3 +113,119 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML AJAX - Employee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Danh sách Employee</h2>
+    <label for="titleDropdown">Chọn Title:</label>
+    <select id="titleDropdown" onchange="filterEmployees()">
+        <option value="">--Chọn Title--</option>
+    </select>
+
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>Mã Employee</th>
+                <th>Tên Employee</th>
+                <th>Phone Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadXMLData();
+        });
+
+        let employees = []; // To store all employees
+        let uniqueTitles = []; // To store unique titles
+
+        function loadXMLData() {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    const xmlDoc = this.responseXML;
+                    employees = Array.from(xmlDoc.getElementsByTagName("employee"));
+
+                    // Extract unique titles and populate dropdown
+                    uniqueTitles = [...new Set(employees.map(emp => emp.getAttribute("title")))];
+                    const dropdown = document.getElementById("titleDropdown");
+                    uniqueTitles.forEach(title => {
+                        const option = document.createElement("option");
+                        option.value = title;
+                        option.textContent = title;
+                        dropdown.appendChild(option);
+                    });
+                }
+            };
+
+            xhr.open("GET", "employees.xml", true);
+            xhr.send();
+        }
+
+        function filterEmployees() {
+            const selectedTitle = document.getElementById("titleDropdown").value;
+            const filteredEmployees = employees.filter(emp => emp.getAttribute("title") === selectedTitle);
+
+            const tbody = document.getElementById("employeeTable").querySelector("tbody");
+            tbody.innerHTML = ""; // Clear previous results
+
+            filteredEmployees.forEach(emp => {
+                const id = emp.getAttribute("id");
+                const name = emp.getElementsByTagName("name")[0].textContent;
+                const phone = emp.getElementsByTagName("phone")[0].textContent;
+
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${id}</td><td>${name}</td><td>${phone}</td>`;
+                tbody.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>
+>>>>>>> d46e53834cc1649ea10775e50ba7250da6c5d9b9

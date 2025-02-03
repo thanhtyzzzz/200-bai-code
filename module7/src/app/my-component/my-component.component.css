@@ -1,0 +1,55 @@
+/* Tổng thể trang */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Màu nền nhẹ */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container chính */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Tiêu đề */
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Định dạng cho các đoạn văn bản */
+.data-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 15px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.data-text:hover {
+    transform: translateY(-5px); /* Hiệu ứng di chuyển nhẹ khi hover */
+}
+
+/* Phần nội dung nổi bật */
+.highlight {
+    font-weight: bold;
+    color: #007bff; /* Màu xanh dương */
+    transition: color 0.3s ease-in-out;
+}
+
+.highlight:hover {
+    color: #0056b3; /* Màu xanh đậm khi hover */
+}

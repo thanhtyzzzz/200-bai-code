@@ -522,7 +522,3 @@ Date2WeekDay(dd: number, mm: number, yy: number){
 
 
 }
-
-
-
-

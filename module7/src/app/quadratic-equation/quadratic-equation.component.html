@@ -1,29 +1,28 @@
 <div class="container">
-    <h3>Giải phương trình bậc 2 online</h3>
-    
-    <div class="inline">
-      <label>Hệ số a:</label>
-      <input type="number" [(ngModel)]="a">
-    </div>
-    
-    <div>
-      <label>Hệ số b:</label>
-      <input type="number" [(ngModel)]="b">
-    </div>
-    
-    <div>
-      <label>Hệ số c:</label>
-      <input type="number" [(ngModel)]="c">
-    </div>
-    <br>
-    
-    <div>
-      <label>Kết quả:</label>
-      <p>{{ result }}</p>
-    </div>
-    <div class="center">
-      <button (click)="solve()">Giải phương trình</button>
-      <button (click)="clear()">Xóa trắng</button>
-    </div>
-    
+  <h3 class="heading">Giải phương trình bậc 2 online</h3>
+  
+  <div class="input-group inline">
+    <label for="a">Hệ số a:</label>
+    <input id="a" type="number" [(ngModel)]="a" class="input-field">
+  </div>
+  
+  <div class="input-group">
+    <label for="b">Hệ số b:</label>
+    <input id="b" type="number" [(ngModel)]="b" class="input-field">
+  </div>
+  
+  <div class="input-group">
+    <label for="c">Hệ số c:</label>
+    <input id="c" type="number" [(ngModel)]="c" class="input-field">
+  </div>
+  
+  <div class="result-group">
+    <label>Kết quả:</label>
+    <p class="result">{{ result }}</p>
+  </div>
+  
+  <div class="center">
+    <button class="btn" (click)="solve()">Giải phương trình</button>
+    <button class="btn clear" (click)="clear()">Xóa trắng</button>
+  </div>
 </div>

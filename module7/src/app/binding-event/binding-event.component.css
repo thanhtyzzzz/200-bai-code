@@ -1,48 +1,91 @@
+/* Tổng thể trang */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-h3 {
+/* Container chính */
+.app-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+}
+
+/* Tiêu đề */
+.heading, .calc-heading {
+    font-size: 1.5rem;
     color: #333;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+/* Phần nội dung của các input */
+.input-container,
+.calc-inputs {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-input[type="text"],
-input[type="number"] {
-    padding: 8px;
-    margin: 5px 10px;
+.input-field {
+    padding: 10px;
+    font-size: 1rem;
+    width: 150px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-top: 10px;
+    transition: border 0.3s;
 }
 
-button {
-    padding: 10px 15px;
-    margin-top: 10px;
-    margin-right: 5px;
-    background-color: #28a745;
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Nút bấm */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 5px;
 }
 
-button:hover {
-    background-color: #218838;
+.btn:hover {
+    background-color: #0056b3;
 }
 
-h4 {
+.clear {
+    background-color: #dc3545;
+}
+
+.clear:hover {
+    background-color: #c82333;
+}
+
+/* Kết quả */
+.result-container {
     margin-top: 20px;
-    color: #007bff;
+    text-align: center;
 }
 
-div {
-    margin-top: 20px;
+.result-container h4 {
+    font-size: 1.2rem;
+    color: #28a745;
 }
