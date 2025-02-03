@@ -1,0 +1,31 @@
+<div>
+    <!-- Thông báo lỗi nếu có lỗi -->
+    <p>service-product-http-handle-error works!</p>
+    <p>{{ errMessage }}</p>
+  
+    <!-- Tiêu đề bảng -->
+    <h2 class="table-title">Danh Sách Sản Phẩm</h2>
+  
+    <!-- Bảng hiển thị sản phẩm -->
+    <table>
+      <thead>
+        <tr>
+          <th>Mã sản phẩm</th>
+          <th>Tên sản phẩm</th>
+          <th>Giá sản phẩm</th>
+          <th>Picture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{ p.ProductId }}</td>
+          <td>{{ p.ProductName }}</td>
+          <td>{{ p.Price }}</td>
+          <td>
+            <img [src]="p.Image" alt="{{ p.ProductName }}" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

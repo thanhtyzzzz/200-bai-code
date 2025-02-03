@@ -1,0 +1,34 @@
+<div>
+  <!-- Tiêu đề cho toàn bộ bảng -->
+  <h2 class="table-title">Danh Sách Khách Hàng</h2>
+
+  <!-- Bảng hiển thị khách hàng -->
+  <table border="1">
+    <!-- Tiêu đề cột bảng -->
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Picture</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let customerType of customerData; let i = index">
+      <!-- Tiêu đề cho từng nhóm khách hàng -->
+      <tr>
+        <td colspan="5" class="category-header">{{ i + 1 }} - {{ customerType.CustomterTypeName }}</td>
+      </tr>
+      <!-- Lặp qua từng khách hàng trong customerType -->
+      <tr *ngFor="let customer of customerType.Customers">
+        <td>{{ customer.Id }}</td>
+        <td>{{ customer.Name }}</td>
+        <td>{{ customer.Email }}</td>
+        <td>{{ customer.Age }}</td>
+        <td>
+          <img [src]="customer.Image" alt="Customer Image" width="80">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

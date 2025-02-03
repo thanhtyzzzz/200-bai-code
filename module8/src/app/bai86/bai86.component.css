@@ -1,0 +1,70 @@
+/* Container chính để giữ bảng sản phẩm */
+.product-details-container {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bảng sản phẩm */
+.product-table {
+  margin: 0 auto;
+  width: 80%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng cho các ô bảng */
+.product-table td {
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Phần tiêu đề của bảng (label) */
+.product-label {
+  font-weight: bold;
+  color: #495057;
+}
+
+/* Phần giá trị của bảng (value) */
+.product-value {
+  color: #343a40;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Hình ảnh sản phẩm */
+.product-image {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hiệu ứng hover cho hình ảnh sản phẩm */
+.product-image:hover {
+  transform: scale(1.1);
+}
+
+/* Hiệu ứng khi di chuột qua các ô trong bảng */
+.product-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Tạo một hiệu ứng bo góc cho toàn bộ bảng */
+.product-table tr {
+  border-radius: 8px;
+}
+
+/* Thêm hiệu ứng cho ô bảng khi hover */
+.product-table td:hover {
+  background-color: #e9ecef;
+}

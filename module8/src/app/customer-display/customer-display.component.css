@@ -1,0 +1,45 @@
+/* Kiểu cho bảng */
+table {
+  width: 200px;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Màu nền trắng cho bảng */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ cho bảng */
+  border-radius: 8px; /* Bo góc cho bảng */
+}
+
+/* Kiểu cho các ô trong bảng */
+td {
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid #ddd; /* Viền nhẹ cho các ô */
+  color: #333; /* Màu chữ tối */
+  transition: background-color 0.3s ease; /* Thêm hiệu ứng nền khi hover */
+}
+
+/* Hiệu ứng nền khi hover vào các ô */
+td:hover {
+  background-color: #f1f1f1; /* Màu nền thay đổi khi di chuột qua */
+  cursor: pointer; /* Con trỏ thay đổi khi hover vào ô */
+}
+
+/* Kiểu cho hình ảnh khách hàng */
+img {
+  display: block;
+  margin: auto;
+  border-radius: 50%; /* Bo tròn hình ảnh */
+  border: 3px solid #28a745; /* Viền hình ảnh xanh lá */
+  transition: transform 0.3s ease; /* Thêm hiệu ứng khi hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng đổ cho hình ảnh */
+}
+
+/* Hiệu ứng khi hover vào hình ảnh */
+img:hover {
+  transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+}
+
+/* Hiệu ứng cho bảng khi hover */
+table:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi di chuột qua bảng */
+}

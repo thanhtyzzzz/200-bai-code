@@ -1,0 +1,21 @@
+<div class="product-details-container">
+  <table class="product-table" border="1">
+      <tr>
+          <td class="product-label">Product ID:</td>
+          <td class="product-value">{{ product.id }}</td>
+      </tr>
+      <tr>
+          <td class="product-label">Product Name:</td>
+          <td class="product-value">{{ product.name }}</td>
+      </tr>
+      <tr>
+          <td class="product-label">Price:</td>
+          <td class="product-value">{{ product.price }}</td>
+      </tr>
+      <tr>
+          <td colspan="2">
+              <img [src]="product.imageUrl" alt="Product Image" class="product-image" />
+          </td>
+      </tr>
+  </table>
+</div>

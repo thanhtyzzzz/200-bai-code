@@ -1,0 +1,65 @@
+/* Đặt font chữ cho toàn bộ trang */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff; /* Nền trang sáng nhẹ */
+  color: #333; /* Màu chữ tối */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Chiều cao của trang bằng chiều cao của viewport */
+}
+
+/* Kiểu bảng */
+table {
+  border-collapse: collapse;
+  width: 80%; /* Đặt chiều rộng bảng chiếm 80% màn hình */
+  margin-bottom: 30px;
+  background-color: #ffffff; /* Màu nền trắng cho bảng */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ cho bảng */
+  border-radius: 8px; /* Bo góc cho bảng */
+}
+
+/* Kiểu cho các ô và thẻ tiêu đề */
+td, th {
+  font-size: 16px;
+  border: 1px solid #4CAF50; /* Đổi đường viền thành màu xanh lá */
+  padding: 10px 15px;
+}
+
+/* Kiểu cho các thẻ tiêu đề */
+th {
+  font-size: 1.1em;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #28a745; /* Màu nền xanh lá cho tiêu đề */
+  color: white; /* Chữ trắng cho tiêu đề */
+  border-top-left-radius: 8px; /* Bo góc cho phía trên trái của bảng */
+  border-top-right-radius: 8px; /* Bo góc cho phía trên phải của bảng */
+}
+
+/* Kiểu cho các ô sản phẩm */
+td {
+  text-align: center; /* Canh giữa các ô */
+}
+
+/* Hiệu ứng khi hover vào hình ảnh */
+img {
+  width: 60px; /* Đặt chiều rộng cho hình ảnh */
+  height: 60px; /* Đặt chiều cao cho hình ảnh */
+  border-radius: 5px; /* Bo góc hình ảnh */
+  transition: transform 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+/* Hiệu ứng khi hover vào hình ảnh */
+img:hover {
+  transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+}
+
+/* Thêm hiệu ứng khi hover vào hàng bảng */
+tr:hover {
+  background-color: #f1f1f1; /* Màu nền thay đổi khi di chuột qua hàng */
+  cursor: pointer; /* Thay đổi con trỏ khi hover vào hàng */
+}

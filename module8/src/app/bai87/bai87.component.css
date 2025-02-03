@@ -1,0 +1,74 @@
+/* Đặt font chữ cho toàn bộ trang */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff; /* Nền trang sáng, nhẹ nhàng */
+    color: #333; /* Màu chữ tối để dễ đọc */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cải thiện bảng */
+table {
+    border-collapse: collapse;
+    width: 600px;
+    margin: 30px auto;
+    background-color: #ffffff; /* Màu nền trắng cho bảng */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ cho bảng */
+    border-radius: 10px; /* Bo góc bảng */
+}
+
+/* Kiểu cho các ô và thẻ tiêu đề */
+td, th {
+    font-size: 16px;
+    border: 1px solid #4CAF50; /* Đổi đường viền thành màu xanh lá */
+    padding: 10px 15px;
+}
+
+/* Kiểu cho các thẻ tiêu đề */
+th {
+    font-size: 1.2em;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #28a745; /* Màu nền xanh lá */
+    color: white; /* Màu chữ trắng cho tiêu đề */
+    border-top-left-radius: 10px; /* Bo góc cho phía trên trái của bảng */
+    border-top-right-radius: 10px; /* Bo góc cho phía trên phải của bảng */
+}
+
+/* Kiểu cho các hàng có class alt */
+tr.alt td {
+    background-color: #e9f7ef; /* Màu nền nhẹ cho các dòng chẵn */
+    color: #4CAF50; /* Màu chữ xanh lá cho các dòng chẵn */
+}
+
+/* Thêm màu nền cho các dòng chẵn (sử dụng nth-child để thay đổi màu nền cho dòng chẵn) */
+tr:nth-child(2n) {
+    background-color: #e9f7ef; /* Màu nền nhẹ cho các dòng chẵn */
+}
+
+/* Thêm hiệu ứng khi hover cho các dòng trong bảng */
+tr:hover {
+    background-color: #f1f1f1; /* Đổi màu nền cho dòng khi di chuột qua */
+}
+
+/* Kiểu cho hình ảnh sản phẩm */
+.product-image {
+    cursor: pointer; /* Chỉ báo cho người dùng biết hình ảnh có thể tương tác */
+    width: 120px; /* Điều chỉnh kích thước hình ảnh */
+    height: auto; /* Đảm bảo tỷ lệ khung hình đúng */
+    border-radius: 8px; /* Bo góc hình ảnh */
+    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng khi hover */
+    margin: 0 auto;
+    display: block;
+}
+
+/* Hiệu ứng khi hover vào hình ảnh */
+.product-image:hover {
+    transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+}
+
+/* Tạo bóng cho bảng khi hover */
+.product-table tr {
+    transition: background-color 0.3s ease;
+}

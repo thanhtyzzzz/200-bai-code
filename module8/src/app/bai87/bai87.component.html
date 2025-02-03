@@ -1,0 +1,21 @@
+<div class="product-list-container">
+  <h2 class="page-title">Product List</h2>
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Unit Price</th>
+        <th>Picture</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td><img [src]="product.img" alt="Product Image" class="product-image"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

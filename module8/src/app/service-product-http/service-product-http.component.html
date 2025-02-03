@@ -1,0 +1,27 @@
+<div>
+  <!-- Tiêu đề chung cho bảng -->
+  <h2 class="table-title">Danh Mục Sản Phẩm</h2>
+
+  <table>
+    <!-- Tiêu đề cột -->
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Unit Price</th>
+        <th>Picture</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Lặp qua các sản phẩm -->
+      <tr *ngFor="let p of products">
+        <td>{{ p.ProductId }}</td>
+        <td>{{ p.ProductName }}</td>
+        <td>{{ p.Price }}</td>
+        <td>
+          <img [src]="p.Image" alt="{{ p.ProductName }}" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

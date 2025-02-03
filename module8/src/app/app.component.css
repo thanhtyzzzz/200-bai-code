@@ -1,0 +1,129 @@
+/* Tổng thể trang */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff7f50, #ff1493); /* Nền gradient với các màu sắc sáng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container chính */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Nền trắng bán trong suốt */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Tiêu đề trang */
+.title h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Bố cục các nút */
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Phong cách các nút */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ff1493; /* Màu nền nút */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #ff7f50; /* Màu nền nút khi hover */
+    transform: scale(1.1); /* Tăng kích thước khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Đổ bóng khi hover */
+}
+
+/* Định dạng cho bảng */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Nền bảng trắng */
+    border-radius: 12px; /* Bo góc bảng */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ cho bảng */
+}
+
+/* Kiểu cho các ô và thẻ tiêu đề trong bảng */
+td, th {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #ddd; /* Đường viền nhẹ cho các ô */
+}
+
+/* Tiêu đề cột trong bảng */
+th {
+    background-color: #ff1493; /* Màu nền của tiêu đề */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hiệu ứng cho các ô khi hover */
+td:hover {
+    background-color: #f1f1f1; /* Màu nền thay đổi khi hover vào ô */
+}
+
+/* Định dạng cho hình ảnh trong bảng */
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+/* Hiệu ứng khi hover vào hình ảnh trong bảng */
+img:hover {
+    transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+}
+
+/* Định dạng cho điện thoại di động */
+@media (max-width: 600px) {
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    table {
+        width: 95%; /* Đảm bảo bảng không quá rộng trên màn hình nhỏ */
+    }
+
+    td, th {
+        font-size: 14px; /* Giảm kích thước chữ cho thiết bị di động */
+    }
+
+    img {
+        width: 60px;
+        height: 60px; /* Hình ảnh nhỏ hơn trên màn hình di động */
+    }
+}
