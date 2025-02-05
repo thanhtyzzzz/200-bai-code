@@ -90,54 +90,36 @@ app.delete("/fashions/:id", cors(), async (req, res) => {
 var cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
-// app.get("/create-cookie",cors(),(req,res)=>{
-//     res.cookie("username","tranduythanh")
-//     res.cookie("password","123456")
-//     account={"username":"tranduythanh",
-//     "password":"123456"}
-//     res.cookie("account",account)
-//     res.send("cookies are created")
-//     })
+app.get("/create-cookie",cors(),(req,res)=>{
+    res.cookie("username","tranduythanh")
+    res.cookie("password","123456")
+    account={"username":"tranduythanh",
+    "password":"123456"}
+    res.cookie("account",account)
+    res.send("cookies are created")
+    })
 
-// app.get("/read-cookie",cors(),(req,res)=>{
-//     //cookie is stored in client, so we use req
-//     username=req.cookies.username
-//     password=req.cookies.password
-//     account=req.cookies.account
-//     infor="username = "+username+"<br/>"
-//     infor+="password = "+password+"<br/>"
-//     if(account!=null)
-//     {
-//     infor+="account.username = "+account.username+"<br/>"
-//     infor+="account.password = "+account.password+"<br/>"
-//     }
-//     res.send(infor)
-//     })
+app.get("/read-cookie",cors(),(req,res)=>{
+    //cookie is stored in client, so we use req
+    username=req.cookies.username
+    password=req.cookies.password
+    account=req.cookies.account
+    infor="username = "+username+"<br/>"
+    infor+="password = "+password+"<br/>"
+    if(account!=null)
+    {
+    infor+="account.username = "+account.username+"<br/>"
+    infor+="account.password = "+account.password+"<br/>"
+    }
+    res.send(infor)
+    })
 
-// //Expires after 360000 ms from the time it is set.
-// res.cookie("infor_limit1", 'I am limited Cookie - way 1', {expire: 360000 + Date.now()});
-// res.cookie("infor_limit2", 'I am limited Cookie - way 2', {maxAge: 360000});
+//Expires after 360000 ms from the time it is set.
+res.cookie("infor_limit1", 'I am limited Cookie - way 1', {expire: 360000 + Date.now()});
+res.cookie("infor_limit2", 'I am limited Cookie - way 2', {maxAge: 360000});
 
-// app.get("/clear-cookie",cors(),(req,res)=>{
-//     res.clearCookie("account")
-//     res.send("[account] Cookie is removed")
-//     })
+app.get("/clear-cookie",cors(),(req,res)=>{
+    res.clearCookie("account")
+    res.send("[account] Cookie is removed")
+    })
 
-
-
-///BỎ
-// var session = require('express-session');
-// app.use(session({secret: "Shh, its a secret!"}));
-
-// app.get("/contact",cors(),(req,res)=>{
-//     if(req.session.visited!=null)
-//     {
-//     req.session.visited++
-//     res.send("You visited this page "+req.session.visited +" times")
-//     }
-//     else
-//     {
-//     req.session.visited=1
-//     res.send("Welcome to this page for the first time!")
-//     }
-// })
