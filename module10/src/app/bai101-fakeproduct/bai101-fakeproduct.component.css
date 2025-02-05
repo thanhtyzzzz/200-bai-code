@@ -1,0 +1,29 @@
+/* Hover effect on table rows */
+tbody tr:hover {
+  background-color: #f9c0c0; /* Soft pink color */
+}
+
+/* Border for table rows */
+tr {
+  border: 1px solid #ddd; /* Light grey border for better contrast */
+}
+
+/* Padding for table headers */
+th {
+  padding: 12px;
+  background-color: #e0e0e0; /* Subtle gray background for headers */
+  color: #333; /* Darker text for readability */
+  font-weight: bold;
+}
+
+/* Optional: Style for table data */
+td {
+  padding: 12px;
+  text-align: left;
+  background-color: #fff; /* White background for table cells */
+}
+
+/* Optional: Style for table rows (striped effect) */
+tr:nth-child(even) {
+  background-color: #f7f7f7; /* Light gray background for even rows */
+}

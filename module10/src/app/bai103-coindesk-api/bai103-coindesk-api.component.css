@@ -1,0 +1,85 @@
+/* General body and container styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for the content */
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styling */
+  h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .bg-dark {
+    background-color: #2c3e50;
+  }
+  
+  /* Table styling */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .table tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table td {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Adding space for description text */
+  p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for table row when it is hovered */
+  .table tbody tr:hover {
+    background-color: #ecf0f1;
+  }
+  

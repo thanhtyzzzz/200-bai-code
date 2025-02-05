@@ -1,0 +1,120 @@
+/* Toàn bộ form */
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.login:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng khi hover vào form */
+}
+
+/* Tiêu đề */
+h2 {
+  color: #4CAF50;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Các trường nhập liệu */
+input {
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Thêm hiệu ứng khi focus vào input */
+input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Thông báo lỗi */
+span {
+  color: #f44336;
+  font-size: 14px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Nhãn cho checkbox */
+label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Nút Submit */
+button {
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hiệu ứng hover cho nút */
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Hiển thị chuỗi JSON dưới nút submit */
+.json-output {
+  text-align: center;
+  color: #ff5722;
+  font-size: 14px;
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+
+/* Thêm khoảng cách giữa các phần tử */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Định dạng logo */
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px; /* Khoảng cách giữa logo và tiêu đề */
+}
+
+.logo {
+  width: 150px;  /* Chiều rộng của logo */
+  height: auto;   /* Giữ tỷ lệ của logo */
+  border-radius: 8px; /* Làm bo góc nếu cần */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Thêm hiệu ứng phóng to khi hover */
+}

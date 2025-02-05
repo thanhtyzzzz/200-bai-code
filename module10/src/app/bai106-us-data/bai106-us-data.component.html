@@ -1,0 +1,24 @@
+{{errMessage}}
+<h3 class="text-center bg-dark text-white p-3">US Data</h3>
+<div class="container bg-light">
+  <table class="table table-hover">
+    <tr>
+      <th>ID Nation</th>
+      <th>Nation</th>
+      <th>ID Year</th>
+      <th>Year</th>
+      <th>Population</th>
+      <th>Slug Nation</th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let dataitem of data.data">
+        <td>{{dataitem['ID Nation']}}</td>
+        <td>{{dataitem['Nation']}}</td>
+        <td>{{dataitem['ID Year']}}</td>
+        <td>{{dataitem['Year']}}</td>
+        <td>{{dataitem['Population']}}</td>
+        <td>{{dataitem['Slug Nation']}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

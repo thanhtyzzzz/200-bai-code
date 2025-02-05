@@ -1,0 +1,32 @@
+<h3 class="text-center bg-dark text-white p-3">Predict Gender</h3>
+<div class="container bg-light">
+  <table class="table">
+    <tr>
+      <td>Name</td>
+      <td><input class="form-control" type="text" [(ngModel)]="name" /></td>
+    </tr>
+  </table>
+  <div class="row">
+    <button class="btn btn-primary w-100" (click)="getGender(name)">Predict</button>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table table-hover">
+    <tr>
+      <td>Name:</td>
+      <td>{{person.name}}</td>
+    </tr>
+    <tr>
+      <td>Gender:</td>
+      <td>{{person.gender}}</td>
+    </tr>
+    <tr>
+      <td>Count:</td>
+      <td>{{person.count}}</td>
+    </tr>
+    <tr>
+      <td>Probability:</td>
+      <td>{{person.probability}}</td>
+  </table>
+</div>

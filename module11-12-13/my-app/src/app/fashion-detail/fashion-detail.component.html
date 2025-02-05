@@ -1,0 +1,41 @@
+<p class="text-center mt-3 font-weight-bold">Fashion Detail Works!</p>
+<h3 class="text-center bg-dark text-white py-3 my-3 rounded">Fashion Detail</h3>
+
+<div class="container bg-light p-4 shadow-lg rounded">
+  <div class="input-group mb-3">
+    <label for="fashionId" class="form-label">Fashion Id:</label>
+    <input type="text" id="fashionId" class="form-control" [(ngModel)]="fashionId" placeholder="Enter Fashion Id">
+  </div>
+  <div class="btn-group w-100 mb-3">
+    <button class="btn btn-dark w-45" (click)="reset()">Reset</button>
+    <button class="btn btn-primary w-45" (click)="searchFashion(fashionId)">Search</button>
+  </div>
+  
+  <table class="table table-bordered table-striped mt-4" *ngIf="checkId; else showErr">
+    <tbody>
+      <tr>
+        <td class="font-weight-bold">Fashion Id:</td>
+        <td>{{fashion._id}}</td>
+      </tr>
+      <tr>
+        <td class="font-weight-bold">Fashion Subject:</td>
+        <td>{{fashion.fashion_subject}}</td>
+      </tr>
+      <tr>
+        <td class="font-weight-bold">Fashion Detail:</td>
+        <td>{{fashion.fashion_detail}}</td>
+      </tr>
+      <tr>
+        <td class="font-weight-bold" colspan="2">
+          <img src="{{fashion.fashion_image}}" alt="fashion image" class="img-fluid rounded mx-auto d-block">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #showErr>
+  <div class="alert alert-danger mt-4">
+    <p>{{errMessage}}</p>
+  </div>
+</ng-template>

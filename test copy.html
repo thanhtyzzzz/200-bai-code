@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Example</title>
+</head>
+<body>
+    <h1>Check console for the fetched data</h1>
+
+    <script>
+        // URL API của Ngân hàng Đông Á
+        fetch('https://www.dongabank.com.vn/exchange/export')
+            .then(response => {
+                // Kiểm tra nếu phản hồi OK và kiểu dữ liệu là JSON
+                if (response.ok) {
+                    return response.json();  // Nếu là JSON, phân tích cú pháp JSON
+                } else {
+                    return response.text();  // Nếu không phải JSON, trả về text
+                }
+            })
+            .then(data => {
+                console.log("Fetched Data: ", data); // In ra dữ liệu trả về từ API
+            })
+            .catch(error => {
+                console.error('Error:', error); // In ra lỗi nếu có
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{{errMessage}}
+
+<h3 class="text-center text-white bg-dark p-3">Product List</h3>
+<div class="product-container">
+  <div class="product-card" *ngFor="let item of data">
+    <img src="{{item.image}}" class="product-image" alt="{{item.title}}">
+    <div class="product-info">
+      <h4 class="product-title">{{item.title}}</h4>
+      <p class="product-price">${{item.price}}</p>
+      <p class="product-rating">Rating: {{item.rating.rate}}</p>
+      <button class="buy-now">Buy Now</button>
+    </div>
+  </div>
+</div>

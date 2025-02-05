@@ -1,0 +1,22 @@
+<p>books works!</p>
+{{errMessage}}
+
+<h2 class="text-center bg-dark text-white p-3">Books</h2>
+  <table class="table table-hover table-striped">
+    <tr class="bg-info">
+      <th>Book Id</th>
+      <th>Book Name</th>
+      <th>Price</th>
+      <th>Image</th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{book.BookId}}</td>
+        <td>{{book.BookName}}</td>
+        <td>{{book.Price}}</td>
+        <td>
+            <img src="assets/book_images/{{book.Image}}" width="50px" height="50px">
+        </td>
+      </tr>
+    </tbody>
+  </table>

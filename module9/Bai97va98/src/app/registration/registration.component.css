@@ -1,0 +1,97 @@
+/* Căn giữa form và tạo độ rộng hợp lý */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .form-title {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Định dạng các ô trong form như bảng */
+  .form-row {
+    display: flex;
+    flex-direction: column;  /* Điều chỉnh cho các trường nhập liệu nằm dọc */
+    margin-bottom: 15px;
+  }
+  
+  .form-row label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .form-row input, .form-row select {
+    width: 100%;  /* Làm cho các trường nhập liệu rộng hơn */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-row input:focus, .form-row select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  }
+  
+  /* Hiển thị thông báo lỗi */
+  .error-message {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 5px;
+    padding-left: 5px;
+  }
+  
+  /* Định dạng cho nút Submit */
+  button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Hiển thị chuỗi JSON dưới nút submit */
+  .json-output {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  
+  /* Tạo hiệu ứng hover cho form */
+  .container:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  

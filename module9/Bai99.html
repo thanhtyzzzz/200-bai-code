@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 99 - Mathematics</title>
+    <style>
+        /* Tô nền đỏ cho các trường nhập liệu có lỗi */
+        .error {
+            background-color: #f8d7da;
+        }
+        .output {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bài 99 - Mathematics</h1>
+
+    <table border="1">
+        <tr>
+            <td>a (So Thu 1):</td>
+            <td><input type="text" id="a" placeholder="Nhập a" /></td>
+        </tr>
+        <tr>
+            <td>b (So Thu 2):</td>
+            <td><input type="text" id="b" placeholder="Nhập b" /></td>
+        </tr>
+        <tr>
+            <td>c (So Thu 3):</td>
+            <td><input type="text" id="c" placeholder="Nhập c" /></td>
+        </tr>
+        <tr>
+            <td>KET QUA:</td>
+            <td>
+                <p id="result"></p>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    <button onclick="calculate()">Tính Toán</button>
+
+    <script>
+        // Hàm tính toán MAX, MIN, sin(a), cos(a), a * b
+        function calculate() {
+            // Lấy giá trị nhập vào
+            const a = parseFloat(document.getElementById('a').value);
+            const b = parseFloat(document.getElementById('b').value);
+            const c = parseFloat(document.getElementById('c').value);
+
+            // Kiểm tra lỗi nhập liệu
+            let valid = true;
+
+            // Xóa lỗi trước khi kiểm tra mới
+            document.getElementById('a').classList.remove("error");
+            document.getElementById('b').classList.remove("error");
+            document.getElementById('c').classList.remove("error");
+
+            if (isNaN(a)) {
+                document.getElementById('a').classList.add("error");
+                valid = false;
+            }
+            if (isNaN(b)) {
+                document.getElementById('b').classList.add("error");
+                valid = false;
+            }
+            if (isNaN(c)) {
+                document.getElementById('c').classList.add("error");
+                valid = false;
+            }
+
+            if (!valid) {
+                alert("Vui lòng nhập đúng dạng số cho tất cả các trường.");
+                return;
+            }
+
+            // Tính toán MAX, MIN, sin(a), cos(a), a * b
+            const max = Math.max(a, b, c);
+            const min = Math.min(a, b, c);
+            const sinA = Math.sin(a * Math.PI / 180); // Chuyển độ sang radian
+            const cosA = Math.cos(a * Math.PI / 180); // Chuyển độ sang radian
+            const aTimesB = a * b;
+
+            // Hiển thị kết quả
+            const result = `
+                MAX: ${max} <br>
+                MIN: ${min} <br>
+                sin(a): ${sinA.toFixed(4)} <br>
+                cos(a): ${cosA.toFixed(4)} <br>
+                a * b: ${aTimesB} <br>
+            `;
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

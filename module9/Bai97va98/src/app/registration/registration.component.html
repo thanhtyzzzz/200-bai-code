@@ -1,0 +1,82 @@
+<div class="container">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <h2 class="form-title">Đăng ký khóa học</h2>
+  
+      <!-- Tên -->
+      <div class="form-row">
+        <label for="name">Tên:</label>
+        <input id="name" formControlName="name" placeholder="Tên">
+        <div *ngIf="registrationForm.get('name')?.touched && registrationForm.get('name')?.invalid" class="error-message">
+          <small *ngIf="registrationForm.get('name')?.errors?.['required']">Tên không được để trống!</small>
+        </div>
+      </div>
+  
+      <!-- Email -->
+      <div class="form-row">
+        <label for="email">Email:</label>
+        <input id="email" type="email" formControlName="email" placeholder="Email">
+        <div *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid" class="error-message">
+          <small *ngIf="registrationForm.get('email')?.errors?.['required']">Email không được để trống!</small>
+          <small *ngIf="registrationForm.get('email')?.errors?.['email']">Email không hợp lệ!</small>
+        </div>
+      </div>
+  
+      <!-- Điện thoại -->
+      <div class="form-row">
+        <label for="phone">Điện thoại:</label>
+        <input id="phone" formControlName="phone" placeholder="Điện thoại">
+        <div *ngIf="registrationForm.get('phone')?.touched && registrationForm.get('phone')?.invalid" class="error-message">
+          <small *ngIf="registrationForm.get('phone')?.errors?.['required']">Điện thoại không được để trống!</small>
+          <small *ngIf="registrationForm.get('phone')?.errors?.['pattern']">Số điện thoại không hợp lệ!</small>
+        </div>
+      </div>
+  
+      <!-- Khóa học -->
+      <div class="form-row">
+        <label for="course">Chọn khóa học:</label>
+        <select id="course" formControlName="course">
+          <option value="">Chọn khóa học</option>
+          <option value="Ruby">Ruby</option>
+          <option value="Java">Java</option>
+          <option value="Angular">Angular</option>
+        </select>
+        <div *ngIf="registrationForm.get('course')?.touched && registrationForm.get('course')?.invalid" class="error-message">
+          <small *ngIf="registrationForm.get('course')?.errors?.['required']">Khóa học là bắt buộc!</small>
+        </div>
+      </div>
+  
+      <!-- Ca học -->
+      <div class="form-row">
+        <label for="time">Chọn ca học:</label>
+        <label>
+          <input type="radio" formControlName="time" value="Sáng"> Sáng
+        </label>
+        <label>
+          <input type="radio" formControlName="time" value="Tối"> Tối
+        </label>
+        <div *ngIf="registrationForm.get('time')?.touched && registrationForm.get('time')?.invalid" class="error-message">
+          <small *ngIf="registrationForm.get('time')?.errors?.['required']">Ca học là bắt buộc!</small>
+        </div>
+      </div>
+  
+      <!-- Điều khoản -->
+      <div class="form-row checkbox-row">
+        <label>
+          <input type="checkbox" formControlName="terms"> Đồng ý với điều khoản
+        </label>
+        <div *ngIf="registrationForm.get('terms')?.touched && registrationForm.get('terms')?.invalid" class="error-message">
+          <small *ngIf="registrationForm.get('terms')?.errors?.['requiredTrue']">Bạn phải đồng ý với điều khoản!</small>
+        </div>
+      </div>
+  
+      <!-- Nút Submit -->
+      <div class="form-row">
+        <button type="submit" [disabled]="registrationForm.invalid">Submit</button>
+      </div>
+    </form>
+  
+    <!-- Hiển thị JSON Object -->
+    <div *ngIf="jsonString" class="json-output">
+      <pre>{{ jsonString }}</pre>
+    </div>
+</div>

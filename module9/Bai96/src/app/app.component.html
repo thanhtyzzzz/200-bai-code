@@ -1,0 +1,38 @@
+<div class="login">
+  <!-- Thêm logo vào đây -->
+  <div class="logo-container">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+  </div>
+  <h2>Login</h2>
+  <form
+    *ngIf="{
+      errors: formErrors$ | async
+    } as data"
+    [formGroup]="form"
+    class="form"
+    (submit)="onSubmit()"
+  >
+    <div class="form-group">
+      <input formControlName="email" placeholder="Email" class="form-input" />
+      <span class="error-message">{{ data.errors?.email }}</span>
+    </div>
+
+    <div class="form-group">
+      <input formControlName="password" placeholder="Password" type="password" class="form-input" />
+      <span class="error-message">{{ data.errors?.password }}</span>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label>
+        <input formControlName="shouldSaveInfo" type="checkbox" />
+        Save information
+      </label>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+  </form>
+
+  <p *ngIf="jsonString" class="json-output">{{ jsonString }}</p>
+</div>

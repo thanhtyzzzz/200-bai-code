@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý Sách</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Quản Lý Thông Tin Sách</h1>
+    
+    <!-- Nút Create New -->
+    <button onclick="createNew()">Create New</button>
+    
+    <!-- Danh sách sách -->
+    <div id="book-list">
+      <!-- Sách sẽ được hiển thị ở đây -->
+    </div>
+  </div>
+
+  <script>
+    // Hàm để lấy danh sách sách và hiển thị
+    function loadBooks() {
+      fetch("http://localhost:3000/books")
+        .then(response => response.json())
+        .then(books => {
+          const bookListDiv = document.getElementById("book-list");
+          bookListDiv.innerHTML = ""; // Làm sạch danh sách cũ
+          books.forEach(book => {
+            const bookDiv = document.createElement("div");
+            bookDiv.innerHTML = `
+              <h3>${book.BookName}</h3>
+              <p>${book.Description}</p>
+              <button onclick="viewDetails('${book.BookId}')">Details</button>
+              <button onclick="editBook('${book.BookId}')">Edit</button>
+              <button onclick="deleteBook('${book.BookId}')">Delete</button>
+            `;
+            bookListDiv.appendChild(bookDiv);
+          });
+        });
+    }
+
+    // Hàm thêm sách mới
+    function createNew() {
+      const newBook = {
+        BookId: "b3",
+        BookName: "Lập trình Node.js",
+        Author: "Tác giả 3",
+        Price: 200,
+        Description: "Sách về lập trình Node.js",
+        Image: "b3.jpg"
+      };
+
+      fetch("http://localhost:3000/books", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newBook)
+      }).then(() => loadBooks());
+    }
+
+    // Hàm xem chi tiết sách
+    function viewDetails(bookId) {
+      fetch(`http://localhost:3000/books/${bookId}`)
+        .then(response => response.json())
+        .then(book => alert(JSON.stringify(book)));
+    }
+
+    // Hàm sửa sách
+    function editBook(bookId) {
+      const updatedBook = {
+        BookName: "Lập trình Node.js (Cập nhật)",
+        Description: "Sách về lập trình Node.js (Cập nhật)"
+      };
+
+      fetch(`http://localhost:3000/books/${bookId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedBook)
+      }).then(() => loadBooks());
+    }
+
+    // Hàm xóa sách
+    function deleteBook(bookId) {
+      fetch(`http://localhost:3000/books/${bookId}`, {
+        method: "DELETE"
+      }).then(() => loadBooks());
+    }
+
+    // Tải danh sách sách khi trang web được load
+    window.onload = loadBooks;
+  </script>
+</body>
+</html>
