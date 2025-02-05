@@ -1,0 +1,30 @@
+/* Tạo bóng cho card */
+.card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tạo hiệu ứng hover cho button */
+  .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Cải thiện form control */
+  .form-control {
+    border: 2px solid #ced4da;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  /* Thiết kế khi focus vào input */
+  .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  }
+  
+  /* Tăng khoảng cách giữa các phần tử */
+  .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  

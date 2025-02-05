@@ -1,20 +1,19 @@
 <div class="container mt-4">
-    <div class="card" style="width: 18rem;">
-    <div class="card-header">Login System</div>
-    <div class="card-body">
-    <form action="/auth/register" method="POST">
-    <div class="mb-3">
-    <label for="name-reg" class="form-label">User Name:</label>
-    <input type="text" class="form-control" id="name-reg"
-    name="name">
+    <div class="card shadow-lg" style="width: 22rem; border-radius: 12px;">
+      <div class="card-header text-center" style="background-color: #6c757d; color: white; font-weight: bold;">Login System</div>
+      <div class="card-body">
+        <form action="/auth/register" method="POST">
+          <div class="mb-3">
+            <label for="name-reg" class="form-label">User Name:</label>
+            <input type="text" class="form-control" id="name-reg" name="name" placeholder="Enter your username" style="border-radius: 8px;">
+          </div>
+          <div class="mb-3">
+            <label for="password-reg" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="password-reg" name="password" placeholder="Enter your password" style="border-radius: 8px;">
+          </div>
+          <button type="submit" class="btn btn-primary w-100" style="border-radius: 8px; padding: 10px;">Login</button>
+        </form>
+      </div>
     </div>
-    <div class="mb-3">
-    <label for="password-reg" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password-reg"
-    name="password">
-    </div>
-    <button type="submit" class="btn btn-primary">Login</button>
-    </form>
-    </div>
-    </div>
-    </div>
+  </div>
+  
