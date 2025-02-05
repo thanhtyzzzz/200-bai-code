@@ -1,30 +1,106 @@
-/* Tạo bóng cho card */
+/* Container for the form */
+.container.mt-4 {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height to center vertically */
+}
+
+/* Card Style */
 .card {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 22rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: none;
+}
+
+/* Card Header */
+.card-header {
+  background-color: #6c757d; /* Gray background */
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #495057;
+}
+
+/* Card Body */
+.card-body {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Form Group */
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+/* Label */
+.form-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057; /* Dark gray color */
+}
+
+/* Input fields */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+/* Input Focus Effect */
+.form-control:focus {
+  border-color: #007bff; /* Blue color when focused */
+  outline: none;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+/* Button Hover Effect */
+.btn-primary:hover {
+  background-color: #0056b3; /* Dark blue when hovered */
+}
+
+/* Button Focus Effect */
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Make the card full width on small screens */
+    padding: 10px;
   }
-  
-  /* Tạo hiệu ứng hover cho button */
-  .btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+
+  .card-header {
+    font-size: 1rem;
   }
-  
-  /* Cải thiện form control */
-  .form-control {
-    border: 2px solid #ced4da;
-    padding: 8px 15px;
-    font-size: 14px;
+
+  .card-body {
+    padding: 15px;
   }
-  
-  /* Thiết kế khi focus vào input */
-  .form-control:focus {
-    border-color: #80bdff;
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+
+  .form-control, .btn-primary {
+    font-size: 0.9rem;
   }
-  
-  /* Tăng khoảng cách giữa các phần tử */
-  .mb-3 {
-    margin-bottom: 1.5rem;
-  }
-  
+}

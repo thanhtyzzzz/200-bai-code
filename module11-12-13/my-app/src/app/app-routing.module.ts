@@ -11,6 +11,7 @@ import { FashionDetailComponent } from './fashion-detail/fashion-detail.componen
 import { FashionNewComponent } from './fashion-new/fashion-new.component';
 import { FashionUpdateComponent } from './fashion-update/fashion-update.component';
 import { FashionDeleteComponent } from './fashion-delete/fashion-delete.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'bai114', component: BooksComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'bai130', component: FashionNewComponent },
   { path: 'bai131', component: FashionUpdateComponent },
   { path: 'bai132', component: FashionDeleteComponent },
+  { path: 'login', component: LoginComponent}
 
 ];
 

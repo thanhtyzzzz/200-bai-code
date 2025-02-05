@@ -1,0 +1,97 @@
+/* Header Styles */
+h3 {
+    background-color: #343a40;
+    padding: 1rem;
+    color: white;
+    border-radius: 8px;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Button Styles */
+  button {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  /* Button Specific Styles */
+  .btn-dark {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-dark:hover {
+    background-color: #23272b;
+  }
+  
+  .btn-light {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-light:hover {
+    background-color: #e2e6ea;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Table Styles */
+  .table {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  
+  .table th, .table td {
+    padding: 1rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table th {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .table td img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  /* Container Styles */
+  .container {
+    padding: 2rem;
+  }
+  
+  .row {
+    margin-bottom: 1rem;
+  }
+  
+  /* Error Message Styles */
+  .errMessage {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  

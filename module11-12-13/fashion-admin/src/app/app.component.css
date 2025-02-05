@@ -1,0 +1,66 @@
+/* Container chính cho Admin Fashion */
+.admin-fashions-container {
+    padding: 20px;
+    max-width: 1200px; /* Giới hạn chiều rộng */
+    margin: 0 auto; /* Căn giữa */
+    background-color: #f4f4f9; /* Màu nền sáng cho toàn bộ trang */
+    border-radius: 8px; /* Bo góc cho container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho phần container */
+  }
+  
+  /* Tiêu đề chính */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    font-size: 2rem; /* Kích thước font lớn */
+    color: #333; /* Màu chữ đậm */
+  }
+  
+  /* Navigation */
+  nav {
+    text-align: center;
+    margin-bottom: 30px; /* Khoảng cách dưới nav */
+  }
+  
+  nav .btn-admin {
+    padding: 12px 25px;
+    background-color: #4CAF50; /* Màu nền xanh lá */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Bo góc cho nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+  }
+  
+  nav .btn-admin:hover {
+    background-color: #45a049; /* Màu nền khi hover */
+  }
+  
+  nav .btn-admin:focus {
+    outline: none; /* Bỏ viền khi nút được chọn */
+  }
+  
+  /* Content area */
+  .content {
+    background-color: #ffffff; /* Nền trắng cho nội dung */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ cho content */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .admin-fashions-container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Giảm kích thước chữ trên màn hình nhỏ */
+    }
+  
+    nav .btn-admin {
+      padding: 10px 20px; /* Giảm kích thước nút trên màn hình nhỏ */
+    }
+  }
+  

@@ -1,4 +1,15 @@
-<button [routerLink]="'fashions'">Admin Fashion</button>
-
-<router-outlet></router-outlet>
-
+<div class="admin-fashions-container">
+    <!-- Thêm một tiêu đề cho khu vực quản lý Fashion -->
+    <h1>Admin Fashion</h1>
+    
+    <!-- Điều hướng đến trang Admin Fashion -->
+    <nav>
+      <button [routerLink]="'/fashions'" class="btn-admin">Go to Admin Fashion</button>
+    </nav>
+  
+    <!-- Khu vực sẽ hiển thị nội dung của các routes -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

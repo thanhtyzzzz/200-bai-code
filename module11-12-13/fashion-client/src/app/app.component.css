@@ -1,0 +1,54 @@
+/* Container chính cho phần Fashion */
+.fashion-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Nút điều hướng */
+  nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  nav .btn-fashion-style {
+    padding: 12px 30px;
+    background-color: #007bff; /* Màu xanh dương cho nút */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hiệu ứng hover cho nút */
+  nav .btn-fashion-style:hover {
+    background-color: #0056b3; /* Màu tối hơn khi hover */
+  }
+  
+  /* Đảm bảo không có viền khi nút được chọn */
+  nav .btn-fashion-style:focus {
+    outline: none;
+  }
+  
+  /* Phần nội dung hiển thị ở bên dưới */
+  router-outlet {
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .fashion-container {
+      padding: 10px;
+    }
+  
+    nav .btn-fashion-style {
+      padding: 10px 20px;
+      font-size: 14px; /* Giảm kích thước chữ trên màn hình nhỏ */
+    }
+  }
+  

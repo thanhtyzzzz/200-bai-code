@@ -1,0 +1,88 @@
+/* Header Styles */
+h3 {
+    background-color: #343a40;
+    padding: 1rem;
+    color: white;
+    border-radius: 8px;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  /* Container Styles */
+  .container.bg-light {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+  }
+  
+  /* Title Styles */
+  h4 {
+    background-color: #6c757d;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.75rem;
+  }
+  
+  /* Text Styles */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-dark {
+    color: #333;
+  }
+  
+  .row {
+    margin-top: 1.5rem;
+  }
+  
+  /* Fashion Detail Styling */
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  /* Image Styling */
+  img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Image Hover Effect */
+  img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .container.bg-light {
+      padding: 1.5rem;
+    }
+  
+    h3 {
+      font-size: 1.6rem;
+    }
+  
+    h4 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  

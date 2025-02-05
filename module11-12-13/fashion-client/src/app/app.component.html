@@ -1,3 +1,10 @@
-<button [routerLink]="'fashions/style'">Fashion Style</button>
-
-<router-outlet></router-outlet>
+<div class="fashion-container">
+    <!-- Button điều hướng đến trang Fashion Style -->
+    <nav>
+      <button class="btn-fashion-style" [routerLink]="'fashions/style'">Fashion Style</button>
+    </nav>
+  
+    <!-- Phần nội dung trang sẽ được hiển thị tại đây -->
+    <router-outlet></router-outlet>
+  </div>
+  
