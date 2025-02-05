@@ -1,0 +1,49 @@
+<h3 class="text-center bg-dark text-white p-3">Fashion New</h3>
+
+<div class="container bg-light p-3">
+  <table class="table">
+    <tr>
+      <td>Fashion Style:</td>
+      <td>
+        <input type="text" class="form-control" #name="ngModel" name="style" id="style" placeholder="Nhập Style"
+          [(ngModel)]="fashion.style" />
+      </td>
+    </tr>
+    <tr>
+      <td>Fashion Subject:</td>
+      <td>
+        <input type="text" class="form-control" #name="ngModel" name="fashion_subject" id="fashion_subject"
+          placeholder="Nhập Subject" [(ngModel)]="fashion.fashion_subject" />
+      </td>
+    </tr>
+    <tr>
+      <td>Fashion Detail:</td>
+      <td>
+        <!-- <input type="text" class="form-control" #name="ngModel" name="fashion_detail" id="fashion_detail"
+          placeholder="Nhập Detail" [(ngModel)]="fashion.fashion_detail" /> -->
+        <ckeditor [(ngModel)]="fashion.fashion_detail" ></ckeditor>
+      </td>
+    </tr>
+    <tr>
+      <td>Fashion Image:</td>
+      <td>
+        <input type="file" class="file-input" #name="ngModel" name="fashion_image" id="fashion_image"
+          [(ngModel)]="fashion.fashion_image" (change)="onFileSelected($event,fashion)" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="btn btn-dark active w-100 my-2 rounded-4" (click)="cancel()">Cancel</button>
+      </td>
+      <td>
+        <button class="btn btn-primary w-100 my-2 active rounded-4" (click)="postFashion()">Submit</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="container">
+  <p>
+    {{errMessage}}
+  </p>
+</div>
